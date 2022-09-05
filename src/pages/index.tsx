@@ -1,4 +1,6 @@
 import * as React from 'react'
+import '../assets/reset.css'
+import { Test } from '../components/test'
 import type { HeadFC } from 'gatsby'
 
 const pageStyles = {
@@ -140,7 +142,7 @@ const IndexPage = () => {
   return (
     <main style={pageStyles}>
       <h1 style={headingStyles}>
-        Congratulations
+        <Test />
         <br />
         <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
       </h1>

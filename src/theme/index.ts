@@ -1,0 +1,43 @@
+import { Theme } from './definitions'
+
+export const theme: Theme = {
+  color: {
+    black: '#2F2F2F',
+    white: '#FFFFFF',
+    text: '#E2E2E2',
+    gray100: '#E2E2E2',
+    gray200: '#7f7f7f88',
+    gray300: '#525252',
+    orange100: '#FFAA00',
+    orange200: '#FCBF49',
+    orange300: '#FCA311',
+    yellow100: '#FFEA00',
+    yellow200: '#FAF991',
+    yellow300: '#D1C56C',
+  },
+  fontSize: {
+    s50: '0.625rem',
+    s100: '0.75rem',
+    s200: '0.875rem',
+    s300: '1rem',
+    s400: '1.125rem',
+    s500: '1.25rem',
+    s600: '1.375rem',
+    s700: '1.75rem',
+    s800: '2rem',
+    s900: '2.5rem',
+    s1000: '6rem',
+  },
+  space: {
+    none: '0',
+    s100: '0.125rem',
+    s200: '0.25rem',
+    s300: '0.5rem',
+    s400: '0.75rem',
+    s500: '1rem',
+    s600: '1.5rem',
+    s700: '2rem',
+    s800: '3rem',
+    s900: '4rem',
+  },
+}
