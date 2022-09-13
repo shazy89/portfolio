@@ -12,6 +12,7 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     'gatsby-plugin-emotion',
+    'gatsby-plugin-root-import',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -29,15 +30,15 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "Ed Shaziman",
-        short_name: "ES",
-        start_url: "/",
-        background_color: "#6b37bf",
-        theme_color: "#6b37bf",
+        name: 'Ed Shaziman',
+        short_name: 'ES',
+        start_url: '/',
+        background_color: '#6b37bf',
+        theme_color: '#6b37bf',
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
-        display: "standalone",
-        icon: "src/images/icon.png", 
+        display: 'standalone',
+        icon: 'src/images/icon.png',
       },
     },
     `gatsby-transformer-sharp`,
