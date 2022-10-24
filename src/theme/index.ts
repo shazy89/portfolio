@@ -1,6 +1,11 @@
 import { Theme } from './definitions'
 
 export const theme: Theme = {
+  border: {
+    radiusLarge: '2.625rem',
+    radiusDefault: '0.25rem',
+    radiusSmall: '0.125rem',
+  },
   color: {
     black: '#2F2F2F',
     white: '#FFFFFF',
