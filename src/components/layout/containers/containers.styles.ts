@@ -1,5 +1,6 @@
 import { css, injectGlobal } from '@emotion/css'
 import { ScreenOptions } from './container.definitions'
+import { FontAwesomeIcon } from '@fortawesome/'
 import { theme } from 'theme'
 
 injectGlobal`

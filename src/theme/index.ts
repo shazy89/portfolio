@@ -10,6 +10,7 @@ export const theme: Theme = {
     black: '#2F2F2F',
     white: '#FFFFFF',
     text: '#E2E2E2',
+    button: '#737373',
     gray100: '#737373',
     gray200: '#404040',
     gray300: '#2d2d2d',

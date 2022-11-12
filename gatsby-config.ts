@@ -46,6 +46,8 @@ const config: GatsbyConfig = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-json`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-anchor-links`,
+    `gatsby-plugin-fontawesome-css`,
   ],
 }
 
