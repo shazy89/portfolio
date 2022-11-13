@@ -1,24 +1,24 @@
 
 import { FunctionComponent, SVGProps } from 'react'
 
-import { default as Facebook1 } from './facebook1'
-import { default as Github1 } from './github1'
-import { default as Instagram1 } from './instagram1'
-import { default as Linkedin1 } from './linkedin1'
+import { default as Facebook } from './facebook'
+import { default as Github } from './github'
+import { default as Instagram } from './instagram'
+import { default as Linkedin } from './linkedin'
 
 export const iconNames = [
-'facebook1',
-'github1',
-'instagram1',
-'linkedin1'
+'facebook',
+'github',
+'instagram',
+'linkedin'
 ] as const
 
 export type IconName = typeof iconNames[number]
 
 export const iconMap: Record<IconName, FunctionComponent<SVGProps<any>>> = {
-'facebook1': Facebook1,
-'github1': Github1,
-'instagram1': Instagram1,
-'linkedin1': Linkedin1
+'facebook': Facebook,
+'github': Github,
+'instagram': Instagram,
+'linkedin': Linkedin
 }
   
