@@ -1,6 +1,8 @@
 import { button, anchorStyles } from './button.styles'
 import * as React from 'react'
 import { cx } from '@emotion/css'
+import { Icon } from 'icon/icon'
+import { IconName } from 'icon/generated/index'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
 type BaseProps = {
@@ -18,15 +20,22 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
 type AnchorButtonProps = {
   to: string
-  children: React.ReactNode
+  children?: React.ReactNode
+  isExternal?: boolean
+  iconName?: IconName
 }
 
-export const AnchorButton = ({ to, children }: AnchorButtonProps) => {
-  return (
-    <AnchorLink className={cx(button, anchorStyles)} to={to}>
-      {children}
-    </AnchorLink>
-  )
-}
-
-export const IconLinks = ({}) => {}
+export const AnchorButton = React.forwardRef<HTMLAnchorElement, AnchorButtonProps>(
+  ({ to, children, isExternal, iconName, ...rest }: AnchorButtonProps, ref) => {
+    return isExternal ? (
+      <a className={cx(anchorStyles)} href={to} ref={ref} rel='noopener noreferrer' target='_blank' {...rest}>
+        {iconName && <Icon name={iconName} size='s700' color='icon' />}
+        <span>{children}</span>
+      </a>
+    ) : (
+      <AnchorLink className={cx(button, anchorStyles)} to={to}>
+        {children}
+      </AnchorLink>
+    )
+  }
+)
