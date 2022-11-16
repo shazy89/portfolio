@@ -21,21 +21,27 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 type AnchorButtonProps = {
   to: string
   children?: React.ReactNode
-  isExternal?: boolean
-  iconName?: IconName
 }
 
-export const AnchorButton = React.forwardRef<HTMLAnchorElement, AnchorButtonProps>(
-  ({ to, children, isExternal, iconName, ...rest }: AnchorButtonProps, ref) => {
-    return isExternal ? (
+export const AnchorButton = ({ to, children }: AnchorButtonProps) => {
+  return (
+    <AnchorLink className={cx(button, anchorStyles)} to={to}>
+      {children}
+    </AnchorLink>
+  )
+}
+
+type ExternalAnchorButtonProps = {
+  to: string
+  iconName: IconName
+}
+
+export const ExternalAnchorButton = React.forwardRef<HTMLAnchorElement, ExternalAnchorButtonProps>(
+  ({ to, iconName, ...rest }: ExternalAnchorButtonProps, ref) => {
+    return (
       <a className={cx(anchorStyles)} href={to} ref={ref} rel='noopener noreferrer' target='_blank' {...rest}>
-        {iconName && <Icon name={iconName} size='s700' color='icon' />}
-        <span>{children}</span>
+        {iconName && <Icon name={iconName} size='s900' color='icon' />}
       </a>
-    ) : (
-      <AnchorLink className={cx(button, anchorStyles)} to={to}>
-        {children}
-      </AnchorLink>
     )
   }
 )
