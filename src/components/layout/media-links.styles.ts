@@ -10,3 +10,13 @@ export const container = css`
   justify-content: center;
   height: 100%;
 `
+
+export const horizontalLine = css`
+  height: 2.8rem;
+  border-left: 3px solid ${theme.color.yellow100};
+`
+
+export const text = css`
+  writing-mode: tb;
+  color: ${theme.color.text};
+`

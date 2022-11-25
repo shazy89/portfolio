@@ -1,7 +1,4 @@
 import { Nav } from 'components/layout/nav/nav'
-import { Area } from 'components/layout/containers/area'
-import { Tooltip, TooltipContent, TooltipTrigger } from 'components/tooltip'
-import { ExternalAnchorButton } from 'components/button/button'
 import '../assets/reset.css'
 import { MediaLinks } from 'components/layout/media-links'
 import { HeadingScreenContent } from 'components/layout/heading-screen-content'
