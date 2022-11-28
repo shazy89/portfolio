@@ -10,12 +10,13 @@ type MediaLinkProps = {
   children: React.ReactNode
   iconName: IconName
   to: string
+  label: string
 }
 
-const MediaLink = ({ children, to, iconName }: MediaLinkProps) => (
+const MediaLink = ({ children, to, iconName, label }: MediaLinkProps) => (
   <Tooltip>
     <TooltipTrigger>
-      <ExternalAnchorButton to={to} iconName={iconName} />
+      <ExternalAnchorButton to={to} iconName={iconName} label={label} />
     </TooltipTrigger>
     <TooltipContent>{children}</TooltipContent>
   </Tooltip>
@@ -53,7 +54,7 @@ export const MediaLinks = () => {
       <div className={text}>Follow Me</div>
       <div className={horizontalLine} />
       {socialMediaData.welcomeJson.social.map(s => (
-        <MediaLink key={s.id} iconName={s.iconName} to={s.link}>
+        <MediaLink key={s.id} label={s.iconName} iconName={s.iconName} to={s.link}>
           {s.tooltip}
         </MediaLink>
       ))}

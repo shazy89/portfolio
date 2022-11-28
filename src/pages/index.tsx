@@ -9,7 +9,6 @@ import { Screen } from 'components/layout/containers/screen'
 import { Page } from 'components/layout/containers/page'
 
 const imageWidth = 370
-const imageHeight = 615
 
 const IndexPage = () => {
   return (
