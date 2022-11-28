@@ -4,21 +4,25 @@
         "image": "./images/author-1.jpg",
         "social": [
             {
+                "id": "1",
                 "iconName": "facebook",
                 "tooltip": "Facebook",
                 "link": "https://www.facebook.com/shazys"
             },
             {
+                "id": "2",
                 "iconName": "instagram",
                 "tooltip": "Instagram",
                 "link": "https://www.instagram.com/shazyoh/"
             },
             {
+                "id": "3",
                 "iconName": "linkedin",
                 "tooltip": "Linkedin",
                 "link": "https://www.linkedin.com/in/erdoan-ed-shaziman-0533611b9/"
             },
             {
+                "id": "4",
                 "iconName": "github",
                 "tooltip": "Github",
                 "link": "https://github.com/shazy89"

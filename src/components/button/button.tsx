@@ -34,12 +34,21 @@ export const AnchorButton = ({ to, children }: AnchorButtonProps) => {
 type ExternalAnchorButtonProps = {
   to: string
   iconName: IconName
+  label: string
 }
 
 export const ExternalAnchorButton = React.forwardRef<HTMLAnchorElement, ExternalAnchorButtonProps>(
-  ({ to, iconName, ...rest }: ExternalAnchorButtonProps, ref) => {
+  ({ to, iconName, label, ...rest }: ExternalAnchorButtonProps, ref) => {
     return (
-      <a className={cx(anchorStyles)} href={to} ref={ref} rel='noopener noreferrer' target='_blank' {...rest}>
+      <a
+        className={cx(anchorStyles)}
+        href={to}
+        ref={ref}
+        rel='noopener noreferrer'
+        target='_blank'
+        aria-label={label}
+        {...rest}
+      >
         {iconName && <Icon name={iconName} size='s900' color='icon' />}
       </a>
     )
