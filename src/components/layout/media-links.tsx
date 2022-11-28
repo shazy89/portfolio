@@ -22,6 +22,7 @@ const MediaLink = ({ children, to, iconName }: MediaLinkProps) => (
 )
 
 type SocinalData = {
+  id: string
   iconName: IconName
   link: string
   tooltip: string
@@ -38,6 +39,7 @@ export const MediaLinks = () => {
     query SocialMedia {
       welcomeJson {
         social {
+          id
           iconName
           link
           tooltip
@@ -51,7 +53,7 @@ export const MediaLinks = () => {
       <div className={text}>Follow Me</div>
       <div className={horizontalLine} />
       {socialMediaData.welcomeJson.social.map(s => (
-        <MediaLink iconName={s.iconName} to={s.link}>
+        <MediaLink key={s.id} iconName={s.iconName} to={s.link}>
           {s.tooltip}
         </MediaLink>
       ))}
