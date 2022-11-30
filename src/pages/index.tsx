@@ -10,7 +10,7 @@ import { Screen } from 'components/layout/containers/screen'
 import { Page } from 'components/layout/containers/page'
 import { Area } from 'components/layout/containers/area'
 
-const imageWidth = 367
+const imageWidth = 366
 
 const IndexPage = () => {
   return (

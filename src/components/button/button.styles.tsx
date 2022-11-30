@@ -45,6 +45,6 @@ export const anchorStyles = css`
 
   :link:active {
     background-color: ${theme.color.gray200};
-    box-shadow: '0px 0px 3px #e2e2e2';
+    box-shadow: 0px 0px 3px #e2e2e2;
   }
 `
