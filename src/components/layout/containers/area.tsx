@@ -1,11 +1,12 @@
 import { css } from '@emotion/css'
-import { SpaceName, SizeValue } from 'theme/definitions'
+import { SpaceName } from 'theme/definitions'
 import { theme } from 'theme'
 import { Property } from 'csstype'
 
 export type AreaProps = {
   alignItems?: Property.AlignItems
   direction?: Property.FlexDirection
+  padding?: SpaceName
   flex?: Property.Flex
   flexGrow?: Property.FlexGrow
   flexShrink?: Property.FlexShrink
@@ -23,6 +24,7 @@ export const area = ({
   gap = 's400',
   justifyContent,
   wrap,
+  padding,
 }: AreaProps) =>
   css({
     alignItems: alignItems && alignItems,
@@ -34,6 +36,7 @@ export const area = ({
     flexWrap: wrap && wrap,
     gap: theme.space[gap],
     justifyContent: justifyContent && justifyContent,
+    padding: padding && theme.space[padding],
   })
 
 type AreaPropsWithChildren = AreaProps & {

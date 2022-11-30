@@ -5,6 +5,7 @@ export const container = css`
   display: flex;
   flex-direction: column;
   gap: ${theme.space.s600};
+  flex: 1;
   width: 5%;
   align-items: center;
   justify-content: center;

@@ -46,5 +46,6 @@ export const theme: Theme = {
     s700: '2rem',
     s800: '3rem',
     s900: '4rem',
+    s1000: '6rem',
   },
 }

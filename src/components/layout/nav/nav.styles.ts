@@ -7,6 +7,7 @@ export const mainNav = css`
   align-items: center;
   display: flex;
   width: 100%;
+  padding: 0 ${theme.space.s1000} 0 0;
 `
 
 export const navList = css`

@@ -6,5 +6,6 @@ export const container = css`
   height: calc(100% - 4rem);
   display: flex;
   flex-direction: row;
-  gap: 3.8rem;
+  gap: 3rem;
+  padding: 0 ${theme.space.s900};
 `

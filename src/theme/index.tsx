@@ -1,16 +1,16 @@
-import { Nav } from 'components/layout/nav/nav'
+import { Nav } from '../components/layout/nav/nav'
 import '../assets/reset.css'
 import { StaticImage } from 'gatsby-plugin-image'
-import { MediaLinks } from 'components/layout/media-links'
-import { Intro } from 'components/layout/intro'
-import { HeadingScreenContent } from 'components/layout/heading-screen-content'
+import { MediaLinks } from '../components/layout/media-links'
+import { Intro } from '../components/layout/intro'
+import { HeadingScreenContent } from '../components/layout/heading-screen-content'
 import React from 'react'
+import { Area } from '../components/layout/containers/area'
 
-import { Screen } from 'components/layout/containers/screen'
-import { Page } from 'components/layout/containers/page'
-import { Area } from 'components/layout/containers/area'
+import { Screen } from '../components/layout/containers/screen'
+import { Page } from '../components/layout/containers/page'
 
-const imageWidth = 367
+const imageWidth = 370
 
 const IndexPage = () => {
   return (

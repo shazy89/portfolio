@@ -25,5 +25,5 @@ export const screen = ({ border, borderRadius }: ScreenOptions) =>
     border: border && boxBorders[border],
     borderRadius: borderRadius && theme.border[borderRadius],
     height: '100%',
-    padding: theme.space.s600,
+    padding: theme.space.s700,
   })

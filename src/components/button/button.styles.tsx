@@ -13,8 +13,8 @@ export const button = css`
   justify-content: center;
   padding: ${theme.space.s300} ${theme.space.s400};
   white-space: nowrap;
-  width: 11rem;
-  box-shadow: '0px 0px 3px #e2e2e2';
+  min-width: 11rem;
+  box-shadow: 0px 0px 3px #e2e2e2;
 
   :disabled {
     cursor: not-allowed;
@@ -23,7 +23,11 @@ export const button = css`
 
   :active:enabled {
     background: ${theme.color.gray200};
-    box-shadow: '0px 0px 3px #e2e2e2';
+    box-shadow: 0px 0px 3px #e2e2e2;
+  }
+
+  :hover {
+    background-color: ${theme.color.gray200};
   }
 `
 

@@ -22,6 +22,7 @@
     "sourceMap": true,         
     "strict": true,
     "target": "es5",
+    "types": ["node"]
   },
   "include": ["src", "./gatsby-node.ts", "gatsby-config.ts", "./plugins/**/*"],
   "exclude": ["node_modules", "**/dist"]
