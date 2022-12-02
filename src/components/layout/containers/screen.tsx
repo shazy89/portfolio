@@ -6,6 +6,6 @@ type ScreenProps = ScreenOptions & {
   children: React.ReactNode
 }
 
-export const Screen = ({ children, border, borderRadius }: ScreenProps) => {
-  return <section className={screen({ border, borderRadius })}>{children}</section>
+export const Screen = ({ children, border, borderRadius, backgroundColor }: ScreenProps) => {
+  return <section className={screen({ border, borderRadius, backgroundColor })}>{children}</section>
 }

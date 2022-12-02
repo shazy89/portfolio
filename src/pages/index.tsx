@@ -16,7 +16,7 @@ const IndexPage = () => {
   return (
     <>
       <Page>
-        <Screen border='primary' borderRadius='radiusLarge'>
+        <Screen backgroundColor='black' border='primary' borderRadius='radiusLarge'>
           <Nav listTitle='main navigation' />
           <HeadingScreenContent>
             <Area direction='row' gap='s1000'>
@@ -34,8 +34,8 @@ const IndexPage = () => {
         </Screen>
       </Page>
       <Page>
-        <Screen border='primary' borderRadius='radiusLarge'>
-          <Nav listTitle='second navigation' />
+        <Screen backgroundColor='gray200'>
+          <h1>HEllo World</h1>
         </Screen>
       </Page>
     </>
