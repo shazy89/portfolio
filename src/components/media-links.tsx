@@ -22,7 +22,7 @@ const MediaLink = ({ children, to, iconName, label }: MediaLinkProps) => (
   </Tooltip>
 )
 
-type SocinalData = {
+type SocialData = {
   id: string
   iconName: IconName
   link: string
@@ -31,7 +31,7 @@ type SocinalData = {
 
 type MediaLinks = {
   welcomeJson: {
-    social: SocinalData[]
+    social: SocialData[]
   }
 }
 

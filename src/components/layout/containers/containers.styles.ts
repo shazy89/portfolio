@@ -9,10 +9,9 @@ body {
 `
 
 export const page = css`
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 4.5rem;
+  padding: 4rem;
 `
 export type BoxBorder = 'primary'
 
@@ -24,7 +23,7 @@ export const screen = ({ border, borderRadius, backgroundColor }: ScreenOptions)
   css({
     border: border && boxBorders[border],
     borderRadius: borderRadius && theme.border[borderRadius],
-    height: '100%',
+    height: '781px',
     padding: theme.space.s700,
     backgroundColor: theme.color[backgroundColor],
   })

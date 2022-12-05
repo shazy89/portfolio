@@ -1,4 +1,4 @@
-import { container } from './heading-screen-content.styles'
+import { container } from './heading-section-content.styles'
 import React from 'react'
 
 type HeadingScreenContentProps = {

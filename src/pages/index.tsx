@@ -1,28 +1,31 @@
 import { Nav } from 'components/layout/nav/nav'
 import '../assets/reset.css'
+import { Heading } from 'components/layout/containers/heading'
 import { StaticImage } from 'gatsby-plugin-image'
-import { MediaLinks } from 'components/layout/media-links'
-import { Intro } from 'components/layout/intro'
-import { HeadingScreenContent } from 'components/layout/heading-screen-content'
+import { MediaLinks } from 'components/media-links'
+import { Intro } from 'components/intro'
+import { HeadingScreenContent } from 'components/heading-section-content'
 import React from 'react'
 
+import { PortfolioSection } from 'components/portfolio-section-content'
 import { Screen } from 'components/layout/containers/screen'
 import { Page } from 'components/layout/containers/page'
 import { Area } from 'components/layout/containers/area'
 
-const imageWidth = 366
+const imageWidth = 365
+const headingImage = '../images/ed-shaziman.png'
 
 const IndexPage = () => {
   return (
-    <>
-      <Page>
+    <Page>
+      <Area gap='s900'>
         <Screen backgroundColor='black' border='primary' borderRadius='radiusLarge'>
           <Nav listTitle='main navigation' />
           <HeadingScreenContent>
             <Area direction='row' gap='s1000'>
               <MediaLinks />
               <StaticImage
-                src='../images/ed-shaziman.png'
+                src={headingImage}
                 layout='fixed'
                 width={imageWidth}
                 alt='Erdoan Shaziman'
@@ -32,13 +35,17 @@ const IndexPage = () => {
             <Intro />
           </HeadingScreenContent>
         </Screen>
-      </Page>
-      <Page>
+
         <Screen backgroundColor='gray200'>
-          <h1>HEllo World</h1>
+          <Area alignItems='center'>
+            <Heading tag='h1' size='700'>
+              Portfolio
+            </Heading>
+          </Area>
+          <PortfolioSection />
         </Screen>
-      </Page>
-    </>
+      </Area>
+    </Page>
   )
 }
 

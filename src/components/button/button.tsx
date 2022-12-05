@@ -1,6 +1,7 @@
 import { button, anchorStyles } from './button.styles'
 import * as React from 'react'
 import { cx } from '@emotion/css'
+import { Color, FontSize } from 'theme/definitions'
 import { Icon } from 'icon/icon'
 import { IconName } from 'icon/generated/index'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
@@ -51,6 +52,22 @@ export const ExternalAnchorButton = React.forwardRef<HTMLAnchorElement, External
       >
         {iconName && <Icon name={iconName} size='s900' color='icon' />}
       </a>
+    )
+  }
+)
+
+type IconButtonProps = {
+  iconColor: Color
+  size: FontSize
+  iconName: IconName
+}
+
+export const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
+  ({ iconColor, size, ...rest }: IconButtonProps, ref) => {
+    return (
+      <button ref={ref} {...rest}>
+        HEY
+      </button>
     )
   }
 )
