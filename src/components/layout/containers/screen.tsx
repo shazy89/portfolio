@@ -1,11 +1,16 @@
 import { screen } from './containers.styles'
-import { ScreenOptions } from './container.definitions'
+import { ScreenOptions, ScreenId } from './container.definitions'
 import * as React from 'react'
 
 type ScreenProps = ScreenOptions & {
   children: React.ReactNode
+  screenId: ScreenId
 }
 
-export const Screen = ({ children, border, borderRadius, backgroundColor }: ScreenProps) => {
-  return <section className={screen({ border, borderRadius, backgroundColor })}>{children}</section>
+export const Screen = ({ children, border, borderRadius, backgroundColor, screenId }: ScreenProps) => {
+  return (
+    <section id={screenId} className={screen({ border, borderRadius, backgroundColor })}>
+      {children}
+    </section>
+  )
 }

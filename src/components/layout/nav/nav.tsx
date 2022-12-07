@@ -18,13 +18,13 @@ export const Nav = ({ listTitle }: NavProps) => {
           </li>
           <Area direction='row' gap='s500'>
             <li>
-              <AnchorButton to='/#main-navigation'>Resume</AnchorButton>
+              <AnchorButton to='/#portfolio-screen'>Resume</AnchorButton>
             </li>
             <li>
-              <AnchorButton to='/#main-navigation'>Portfolio</AnchorButton>
+              <AnchorButton to='/#portfolio-screen'>Portfolio</AnchorButton>
             </li>
             <li>
-              <AnchorButton to='/#main-navigation'>About</AnchorButton>
+              <AnchorButton to='/#heading-screen'>About</AnchorButton>
             </li>
           </Area>
         </ul>

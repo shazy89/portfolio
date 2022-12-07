@@ -1,1 +1,9 @@
-[]
+[{
+  "id": 1,
+  "projectName": "Portfolio Website",
+  "github": "https://github.com/shazy89/portfolio",
+  "link": "https://edshaziman.com/",
+  "info": "Personal portfolio website v2. It was designed and developed by me. Includes information about me and my previous and latest projects.",
+  "developed_at": ""
+
+}]

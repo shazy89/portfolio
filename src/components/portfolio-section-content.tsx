@@ -1,9 +1,11 @@
 import * as React from 'react'
 import { arrow, container } from './portfolio-section-content.styles'
 import { Icon } from 'icon/icon'
-
+import { ProgressBar } from './progress-bar'
+import { Screen } from './layout/containers/screen'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Heading } from './layout/containers/heading'
+import { Area } from './layout/containers/area'
 
 const variants = {
   enter: (direction: number) => {
@@ -93,18 +95,26 @@ export const PortfolioSection = () => {
   const handlePrev = () => setActiveIndex(step => (step -= 1))
 
   return (
-    <div className={container}>
-      <AnimatePresence exitBeforeEnter>
-        {projects.map(({ component: Component }, index) =>
-          activeIndex === index ? <Component key={index} /> : null
-        )}
-      </AnimatePresence>
-      <div className={arrow('left')} onClick={handlePrev}>
-        <Icon name='circle-left-solid' size='s900' color='yellow100' />
+    <Screen backgroundColor='gray200' screenId='portfolio-screen'>
+      <ProgressBar activeIndex={activeIndex + 1} totalLength={projects.length} />
+      <Area alignItems='center'>
+        <Heading tag='h1' size='700'>
+          Portfolio
+        </Heading>
+      </Area>
+      <div className={container}>
+        <AnimatePresence exitBeforeEnter>
+          {projects.map(({ component: Component }, index) =>
+            activeIndex === index ? <Component key={index} /> : null
+          )}
+        </AnimatePresence>
+        <div className={arrow('left')} onClick={handlePrev}>
+          <Icon name='circle-left-solid' size='s900' color='yellow100' />
+        </div>
+        <div className={arrow('right')} onClick={handleNext}>
+          <Icon name='circle-right-solid' size='s900' color='yellow100' />
+        </div>
       </div>
-      <div className={arrow('right')} onClick={handleNext}>
-        <Icon name='circle-right-solid' size='s900' color='yellow100' />
-      </div>
-    </div>
+    </Screen>
   )
 }

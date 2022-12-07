@@ -4,6 +4,7 @@ import { cx } from '@emotion/css'
 import { Color, FontSize } from 'theme/definitions'
 import { Icon } from 'icon/icon'
 import { IconName } from 'icon/generated/index'
+import { ScreenId } from 'components/layout/containers/container.definitions'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
 type BaseProps = {
@@ -20,7 +21,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 )
 
 type AnchorButtonProps = {
-  to: string
+  to: `/#${ScreenId}`
   children?: React.ReactNode
 }
 

@@ -26,14 +26,19 @@ export type FontSize = typeof fontSizes[number]
 const borderKeys = ['radiusLarge', 'radiusDefault', 'radiusSmall'] as const
 export type BorderKey = typeof borderKeys[number]
 
+const gradientNames = ['gold'] as const
+export type GradientName = typeof gradientNames[number]
+
 export type ColorTheme = { [k in Color]: ColorValue }
 export type SpaceTheme = { [k in SpaceName]: SizeValue }
 export type FontSizeTheme = { [k in FontSize]: SizeValue }
 export type BorderTheme = { [k in BorderKey]: SizeValue }
+export type GradientTheme = { [k in GradientName]: string }
 
 export type Theme = {
   color: ColorTheme
   border: BorderTheme
   space: SpaceTheme
   fontSize: FontSizeTheme
+  gradient: GradientTheme
 }

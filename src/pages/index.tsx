@@ -1,12 +1,10 @@
 import { Nav } from 'components/layout/nav/nav'
 import '../assets/reset.css'
-import { Heading } from 'components/layout/containers/heading'
 import { StaticImage } from 'gatsby-plugin-image'
 import { MediaLinks } from 'components/media-links'
 import { Intro } from 'components/intro'
 import { HeadingScreenContent } from 'components/heading-section-content'
 import React from 'react'
-
 import { PortfolioSection } from 'components/portfolio-section-content'
 import { Screen } from 'components/layout/containers/screen'
 import { Page } from 'components/layout/containers/page'
@@ -36,14 +34,7 @@ const IndexPage = () => {
           </HeadingScreenContent>
         </Screen>
 
-        <Screen backgroundColor='gray200'>
-          <Area alignItems='center'>
-            <Heading tag='h1' size='700'>
-              Portfolio
-            </Heading>
-          </Area>
-          <PortfolioSection />
-        </Screen>
+        <PortfolioSection />
       </Area>
     </Page>
   )
