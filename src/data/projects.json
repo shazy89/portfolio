@@ -1,9 +1,69 @@
-[{
-  "id": 1,
-  "projectName": "Portfolio Website",
-  "github": "https://github.com/shazy89/portfolio",
-  "link": "https://edshaziman.com/",
-  "info": "Personal portfolio website v2. It was designed and developed by me. Includes information about me and my previous and latest projects.",
-  "developed_at": ""
-
-}]
+[
+  {
+    "id": 1,
+    "projectName": "Portfolio Website",
+    "github": "https://github.com/shazy89/portfolio",
+    "link": "https://edshaziman.com/",
+    "info": "Personal portfolio website v2. It was designed and developed by me. Includes information about me and my previous and latest projects.",
+    "developed_at": "",
+    "demo": "",
+    "techologies": [
+      "react",
+      "gatsbyJs",
+      "javascript",
+      "emotion",
+      "typescript"
+    ]
+  },
+  {
+    "id": 2,
+    "projectName": "Culina",
+    "github": "https://github.com/shazy89/culina-dashboard",
+    "link": "https://culina.website/",
+    "info": "Dashboard of a Saas construction App. Admin users can add new companies and manage current companies. Each company can have employee users added to them. Projects and work orders can be created to track ongoing work. Charts are displayed to show revenue, total employee count, total user count, and total project data.",
+    "developed_at": "",
+    "demo": "https://www.youtube.com/watch?v=yfwoDKNhJQg&list=PL0zbnzgKNis1xNPhk3jmGx_KhQgK1SzaS&index=13",
+    "techologies": [
+      "javascript",
+      "react",
+      "redux",
+      "html",
+      "mongo",
+      "css",
+      "sass"
+    ]
+  },
+  {
+    "id": 3,
+    "projectName": "RentMe",
+    "github": "https://github.com/shazy89/RentMe-mobile",
+    "link": "",
+    "info": "Single Page Car rental app with customizable dates for customers. Admin has the ability to upload images for new car postings, manage current listings, and review booking metrics reports.",
+    "developed_at": "",
+    "demo": "https://www.youtube.com/embed/dZjlMhitkwc",
+    "techologies": [
+      "javascript",
+      "react",
+      "redux",
+      "html",
+      "css",
+      "ruby-rails",
+      "postgresql"
+    ]
+  },
+  {
+    "id": 4,
+    "projectName": "OneTouch",
+    "github": "https://github.com/shazy89/One-Touch",
+    "link": "https://edshaziman.com/",
+    "info": "Management system that restaurants use to efficiently manage guests through the entire dining experience. It gives managers the tools to turn tables faster and reduce errors.",
+    "developed_at": "",
+    "demo": "https://www.youtube.com/embed/JYbe-mDsMcU",
+    "techologies": [
+      "ruby-rails",
+      "html",
+      "css",
+      "postgresql"
+    ]
+  }
+]

@@ -5,7 +5,7 @@ import { MediaLinks } from 'components/media-links'
 import { Intro } from 'components/intro'
 import { HeadingScreenContent } from 'components/heading-section-content'
 import React from 'react'
-import { PortfolioSection } from 'components/portfolio-section-content'
+import { PortfolioSection } from 'components/portfolio-section'
 import { Screen } from 'components/layout/containers/screen'
 import { Page } from 'components/layout/containers/page'
 import { Area } from 'components/layout/containers/area'
@@ -17,7 +17,7 @@ const IndexPage = () => {
   return (
     <Page>
       <Area gap='s900'>
-        <Screen backgroundColor='black' border='primary' borderRadius='radiusLarge'>
+        <Screen screenId='heading-screen' backgroundColor='black' border='primary' borderRadius='radiusLarge'>
           <Nav listTitle='main navigation' />
           <HeadingScreenContent>
             <Area direction='row' gap='s1000'>

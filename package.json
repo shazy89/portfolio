@@ -20,7 +20,7 @@
     "@emotion/css": "11.10.0",
     "@emotion/react": "11.10.4",
     "@tippyjs/react": "4.2.6",
-    "framer-motion": "6.3.3",
+    "framer-motion": "8.0.2",
     "gatsby": "5.0.0",
     "gatsby-plugin-anchor-links": "1.2.1",
     "gatsby-plugin-emotion": "8.2.0",
