@@ -6,7 +6,14 @@ type ProjectData = {
     link: string
     developed_at: string
     demo: string
+    info: string
     techologies: string[]
+    images: [
+      {
+        description: string
+        image_id: string
+      }
+    ]
   }
 }
 

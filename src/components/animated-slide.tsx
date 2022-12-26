@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, AnimatePresenceProps } from 'framer-motion'
 import * as React from 'react'
 
 const transitionDuration = 1
@@ -8,7 +8,7 @@ export type Direction = 'in' | 'out'
 const variants = {
   enter: (direction: Direction) => {
     return {
-      x: direction === 'in' ? 1000 : -500,
+      x: direction === 'in' ? 500 : -500,
       opacity: 0,
     }
   },
@@ -20,7 +20,7 @@ const variants = {
   exit: (direction: Direction) => {
     return {
       zIndex: 0,
-      x: direction === 'in' ? -500 : 1000,
+      x: direction === 'in' ? -500 : 500,
       opacity: 0,
     }
   },
@@ -63,7 +63,7 @@ export const AnimatedSlideItem = React.forwardRef<HTMLDivElement, AnimatedSlideI
         animate='center'
         onAnimationComplete={onAnimationComplete}
         exit='exit'
-        transition={{ duration: transitionDuration }}
+        transition={{ duration: transitionDuration, type: 'spring', bounce: 0.25 }}
         ref={ref}
         {...rest}
         style={{ height: '100%' }}

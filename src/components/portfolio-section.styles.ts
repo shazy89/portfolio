@@ -4,7 +4,7 @@ import { theme } from 'theme'
 export const container = css`
   height: calc(100% - 8rem);
   position: relative;
-  padding: 0 ${theme.space.s800};
+  padding: ${theme.space.s500} ${theme.space.s800};
 `
 
 type Position = 'left' | 'right'

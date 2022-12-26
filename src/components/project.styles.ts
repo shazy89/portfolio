@@ -9,5 +9,5 @@ export const container = css`
   display: flex;
   flex-direction: row;
   height: 100%;
-  justify-content: space-around;
+  justify-content: space-evenly;
 `

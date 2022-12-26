@@ -1,5 +1,9 @@
 import type { GatsbyConfig } from 'gatsby'
 
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `My Gatsby Site`,
@@ -25,6 +29,20 @@ const config: GatsbyConfig = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-cloudinary`,
+      options: {
+        cloudName: process.env.GATSBY_CLOUDINARY_CLOUD_NAME,
+        apiKey: process.env.GATSBY_CLOUDINARY_API_KEY,
+        apiSecret: process.env.GATSBY_CLOUDINARY_API_SECRET,
+        resourceType: `image`,
+        // type: `twitter`,
+        // maxResults: 22,
+        tags: true,
+        context: true,
+        prefix: `projects`,
       },
     },
     {

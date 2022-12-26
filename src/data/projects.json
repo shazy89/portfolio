@@ -1,19 +1,17 @@
 [
   {
     "id": 1,
-    "projectName": "Portfolio Website",
-    "github": "https://github.com/shazy89/portfolio",
-    "link": "https://edshaziman.com/",
-    "info": "Personal portfolio website v2. It was designed and developed by me. Includes information about me and my previous and latest projects.",
-    "developed_at": "",
     "demo": "",
-    "techologies": [
-      "react",
-      "gatsbyJs",
-      "javascript",
-      "emotion",
-      "typescript"
-    ]
+    "developed_at": "",
+    "github": "https://github.com/shazy89/portfolio",
+    "info": "Personal portfolio website v2. It was designed and developed by me. Includes information about me and my previous and latest projects.",
+    "link": "https://edshaziman.com/",
+    "projectName": "Portfolio Website",
+    "images": [
+      { "image_id": "projects/Screen_Shot_2022-12-26_at_7.20.34_AM_uxxnui", "description": "The heading screen, with yellow frame borders, lefts side includes the social media links, next to the links Ed Shazimans image and the right to the nav bar and below the navbar intro." },
+      { "image_id": "projects/Screen_Shot_2022-12-26_at_7.20.46_AM_gfaloe", "description": "Portfolio section, the image includes left and right clickable arrows positioned to the left and right of the picture. The idea has two parts. The left side of the page contains two images about the project, and the right side project description and clickable links." }
+    ],
+    "techologies": ["react", "gatsbyJs", "javascript", "emotion", "typescript"]
   },
   {
     "id": 2,
@@ -23,15 +21,11 @@
     "info": "Dashboard of a Saas construction App. Admin users can add new companies and manage current companies. Each company can have employee users added to them. Projects and work orders can be created to track ongoing work. Charts are displayed to show revenue, total employee count, total user count, and total project data.",
     "developed_at": "",
     "demo": "https://www.youtube.com/watch?v=yfwoDKNhJQg&list=PL0zbnzgKNis1xNPhk3jmGx_KhQgK1SzaS&index=13",
-    "techologies": [
-      "javascript",
-      "react",
-      "redux",
-      "html",
-      "mongo",
-      "css",
-      "sass"
-    ]
+    "images": [
+      { "image_id": "projects/Screen_Shot_2021-06-30_at_7.16.01_PM_pzqi1o", "description": "culina dashboard page includes info about the clients, users, pojects and dynamic charts" },
+      { "image_id": "projects/Screen_Shot_2021-06-30_at_7.16.26_PM_nxervm", "description": "Culina, clients page. Includes data about the client, employees, and projects" }
+    ],
+    "techologies": ["javascript", "react", "redux", "html", "mongo", "css", "sass"]
   },
   {
     "id": 3,
@@ -41,15 +35,11 @@
     "info": "Single Page Car rental app with customizable dates for customers. Admin has the ability to upload images for new car postings, manage current listings, and review booking metrics reports.",
     "developed_at": "",
     "demo": "https://www.youtube.com/embed/dZjlMhitkwc",
-    "techologies": [
-      "javascript",
-      "react",
-      "redux",
-      "html",
-      "css",
-      "ruby-rails",
-      "postgresql"
-    ]
+    "images": [
+      { "image_id": "projects/rm1_dpkrja", "description": "rent me available cars page" },
+      { "image_id": "projects/rm3_vgeuvx.png", "description": "rent me form page" }
+    ],
+    "techologies": ["javascript", "react", "redux", "html", "css", "ruby-rails", "postgresql"]
   },
   {
     "id": 4,
@@ -59,11 +49,10 @@
     "info": "Management system that restaurants use to efficiently manage guests through the entire dining experience. It gives managers the tools to turn tables faster and reduce errors.",
     "developed_at": "",
     "demo": "https://www.youtube.com/embed/JYbe-mDsMcU",
-    "techologies": [
-      "ruby-rails",
-      "html",
-      "css",
-      "postgresql"
-    ]
+    "images": [
+      { "image_id": "projects/ot2_stmumv", "description": null },
+      { "image_id": "projects/ot3_vjnp1a", "description": null }
+    ],
+    "techologies": ["ruby-rails", "html", "css", "postgresql"]
   }
 ]

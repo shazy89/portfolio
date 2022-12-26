@@ -6,7 +6,7 @@ import { Screen } from './layout/containers/screen'
 
 import { Projects } from 'data/queries.definitions'
 import { Project } from './project'
-import { Heading } from './layout/containers/heading'
+import { Heading } from './heading/heading'
 import { Area } from './layout/containers/area'
 import { graphql, useStaticQuery } from 'gatsby'
 import { AnimatedSlideItem, AnimatedSlide, Direction } from './animated-slide'
@@ -23,6 +23,11 @@ const projetcsQuery = graphql`
           developed_at
           demo
           techologies
+          info
+          images {
+            description
+            image_id
+          }
         }
       }
     }
@@ -35,7 +40,7 @@ export const PortfolioSection = () => {
   const [direction, setDirection] = React.useState<Direction>('out')
 
   const allProjects = projects.allProjectsJson.edges
-
+  console.log(allProjects)
   const handleNext = () =>
     setActiveIndex(step => {
       if (step < allProjects.length - 1) {

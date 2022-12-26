@@ -17,6 +17,8 @@
     "generate:icons": "svgr --jsx-runtime \"automatic\" --typescript --no-prettier --icon --ext \"tsx\" --filename-case \"kebab\" --index-template \"./src/icon/templates/icon-index.js\" --out-dir \"./src/icon/generated\" ./src/icon/svg"
   },
   "dependencies": {
+    "@cloudinary/react": "^1.7.0",
+    "@cloudinary/url-gen": "^1.8.7",
     "@emotion/css": "11.10.0",
     "@emotion/react": "11.10.4",
     "@tippyjs/react": "4.2.6",
