@@ -1,19 +1,22 @@
 import { Area } from './layout/containers/area'
+import { Text } from './typography/text'
 import { line } from './project.styles'
 import { Projects } from 'data/queries.definitions'
-import { container } from './project.styles'
+import { container, projectHeading } from './project.styles'
 import { Cloudinary } from '@cloudinary/url-gen'
 import { scale } from '@cloudinary/url-gen/actions/resize'
 import { AdvancedImage, lazyload, placeholder } from '@cloudinary/react'
 import React from 'react'
-import { Heading } from './heading/heading'
-import { graphql } from 'gatsby'
+import DOMPurify from 'dompurify'
+import { Heading } from './typography/heading'
 
 type Project = {
   project: Projects['allProjectsJson']['edges'][number]
 }
 
 export const Project = ({ project }: Project) => {
+  const info = DOMPurify.sanitize(project.node.info)
+
   return (
     <>
       <div className={container}>
@@ -23,9 +26,19 @@ export const Project = ({ project }: Project) => {
           ))}
         </Area>
         <div className={line} />
-        <Area alignItems='center' flex={0.5}>
-          <Heading tag='h3'>{project.node.projectName}</Heading>
-          <Area>{project.node.info}</Area>
+        <Area gap='s600' padding='s500' alignItems='center' flex={0.5}>
+          <div className={projectHeading}>
+            <Heading tag='h2' centerAlign>
+              {project.node.projectName}
+            </Heading>
+          </div>
+          <Text tag='p' size='s400'>
+            <span
+              dangerouslySetInnerHTML={{
+                __html: info,
+              }}
+            />
+          </Text>
         </Area>
       </div>
     </>

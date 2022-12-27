@@ -1,5 +1,5 @@
 import { Area } from './layout/containers/area'
-import { Heading } from './heading/heading'
+import { Heading } from './typography/heading'
 import { Button } from 'components/button/button'
 import { heading, container, verticalLine } from './intro.styles'
 import React from 'react'

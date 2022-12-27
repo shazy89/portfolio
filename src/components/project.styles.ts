@@ -11,3 +11,9 @@ export const container = css`
   height: 100%;
   justify-content: space-evenly;
 `
+
+export const projectHeading = css`
+  width: 60%;
+  border-bottom: 3px solid ${theme.color.yellow100};
+  padding: ${theme.space.s300};
+`

@@ -32,20 +32,6 @@ const config: GatsbyConfig = {
       },
     },
     {
-      resolve: `gatsby-source-cloudinary`,
-      options: {
-        cloudName: process.env.GATSBY_CLOUDINARY_CLOUD_NAME,
-        apiKey: process.env.GATSBY_CLOUDINARY_API_KEY,
-        apiSecret: process.env.GATSBY_CLOUDINARY_API_SECRET,
-        resourceType: `image`,
-        // type: `twitter`,
-        // maxResults: 22,
-        tags: true,
-        context: true,
-        prefix: `projects`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'Ed Shaziman',

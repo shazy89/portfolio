@@ -4,55 +4,106 @@
     "demo": "",
     "developed_at": "",
     "github": "https://github.com/shazy89/portfolio",
-    "info": "Personal portfolio website v2. It was designed and developed by me. Includes information about me and my previous and latest projects.",
+    "info": "Personal portfolio website v2. Includes more information about me and my previous and latest projects.<br /><br /> Users can find my social media links. Using the Portfolio section can find out more about my portfolio projects, read the description and see the code using the GitHub links.<br /><br /> I use the Gatsbyjs framework with Typescript and Emotion also designed the project on Figma.",
     "link": "https://edshaziman.com/",
     "projectName": "Portfolio Website",
     "images": [
-      { "image_id": "projects/Screen_Shot_2022-12-26_at_7.20.34_AM_uxxnui", "description": "The heading screen, with yellow frame borders, lefts side includes the social media links, next to the links Ed Shazimans image and the right to the nav bar and below the navbar intro." },
-      { "image_id": "projects/Screen_Shot_2022-12-26_at_7.20.46_AM_gfaloe", "description": "Portfolio section, the image includes left and right clickable arrows positioned to the left and right of the picture. The idea has two parts. The left side of the page contains two images about the project, and the right side project description and clickable links." }
+      {
+        "image_id": "projects/Screen_Shot_2022-12-26_at_7.20.34_AM_uxxnui",
+        "description": "The heading screen, with yellow frame borders, lefts side includes the social media links, next to the links Ed Shazimans image and the right to the nav bar and below the navbar intro."
+      },
+      {
+        "image_id": "projects/Screen_Shot_2022-12-26_at_7.20.46_AM_gfaloe",
+        "description": "Portfolio section, the image includes left and right clickable arrows positioned to the left and right of the picture. The idea has two parts. The left side of the page contains two images about the project, and the right side project description and clickable links."
+      }
     ],
-    "techologies": ["react", "gatsbyJs", "javascript", "emotion", "typescript"]
+    "techologies": [
+      "react",
+      "gatsbyJs",
+      "javascript",
+      "emotion",
+      "typescript"
+    ]
   },
   {
     "id": 2,
     "projectName": "Culina",
     "github": "https://github.com/shazy89/culina-dashboard",
     "link": "https://culina.website/",
-    "info": "Dashboard of a Saas construction App. Admin users can add new companies and manage current companies. Each company can have employee users added to them. Projects and work orders can be created to track ongoing work. Charts are displayed to show revenue, total employee count, total user count, and total project data.",
+    "info": "Dashboard of a Saas construction App. Admin users can add new companies and manage current companies. Each company can have employee users added to them. Projects and work orders can be created to track ongoing work. Charts are displayed to show revenue, total employee count, total user count, and total project data. <br/><br/>A small portion of this app is finished, and more is to come. Clients will be able to track the company trucks, and the shared tools also will have a preview of what materials the track has and what materials are picked up from the warehouse daily <br/><br/> Culina is a MERN stack app and is a practice project. It's not being used in the real world.",
     "developed_at": "",
     "demo": "https://www.youtube.com/watch?v=yfwoDKNhJQg&list=PL0zbnzgKNis1xNPhk3jmGx_KhQgK1SzaS&index=13",
     "images": [
-      { "image_id": "projects/Screen_Shot_2021-06-30_at_7.16.01_PM_pzqi1o", "description": "culina dashboard page includes info about the clients, users, pojects and dynamic charts" },
-      { "image_id": "projects/Screen_Shot_2021-06-30_at_7.16.26_PM_nxervm", "description": "Culina, clients page. Includes data about the client, employees, and projects" }
+      {
+        "image_id": "projects/Screen_Shot_2021-06-30_at_7.16.01_PM_pzqi1o",
+        "description": "culina dashboard page includes info about the clients, users, pojects and dynamic charts"
+      },
+      {
+        "image_id": "projects/Screen_Shot_2021-06-30_at_7.16.26_PM_nxervm",
+        "description": "Culina, clients page. Includes data about the client, employees, and projects"
+      }
     ],
-    "techologies": ["javascript", "react", "redux", "html", "mongo", "css", "sass"]
+    "techologies": [
+      "javascript",
+      "react",
+      "redux",
+      "html",
+      "mongo",
+      "css",
+      "sass"
+    ]
   },
   {
     "id": 3,
     "projectName": "RentMe",
     "github": "https://github.com/shazy89/RentMe-mobile",
     "link": "",
-    "info": "Single Page Car rental app with customizable dates for customers. Admin has the ability to upload images for new car postings, manage current listings, and review booking metrics reports.",
+    "info": "Car rental app featuring multiple cars, customizable dates, schedule and manage bookings that will calculate the fare for customers. Admin has the ability to manage the cars, upload images for new car postings, and review booking metrics reports. <br/><br/>RentMe is (SPA) car rental app where users can search for available cars on selected dates, check for prices and schedule a booking. Admin users can use tools for creating new available cars, edit listings, upload images to listings and view reports on bookings.<br/><br/>The Backend uses Ruby on Rails with PostgreSQL, and Frontend is handled using React.",
     "developed_at": "",
     "demo": "https://www.youtube.com/embed/dZjlMhitkwc",
     "images": [
-      { "image_id": "projects/rm1_dpkrja", "description": "rent me available cars page" },
-      { "image_id": "projects/rm3_vgeuvx.png", "description": "rent me form page" }
+      {
+        "image_id": "projects/rm1_dpkrja",
+        "description": "rent me available cars page"
+      },
+      {
+        "image_id": "projects/rm3_vgeuvx.png",
+        "description": "rent me form page"
+      }
     ],
-    "techologies": ["javascript", "react", "redux", "html", "css", "ruby-rails", "postgresql"]
+    "techologies": [
+      "javascript",
+      "react",
+      "redux",
+      "html",
+      "css",
+      "ruby-rails",
+      "postgresql"
+    ]
   },
   {
     "id": 4,
     "projectName": "OneTouch",
     "github": "https://github.com/shazy89/One-Touch",
     "link": "https://edshaziman.com/",
-    "info": "Management system that restaurants use to efficiently manage guests through the entire dining experience. It gives managers the tools to turn tables faster and reduce errors.",
+    "info": "Management system that restaurants use to efficiently manage guests through the entire dining experience. It gives managers the tools to turn tables faster and reduce errors.<br/><br/>oneTouch is a POS(point of sale) system and is cloud based also is very easy to use, everything is on one click away!<br/><br/>To be able to use the program, users must create a new account or can log in with their GitHub acc. There must be an admin user. Admin users can manage the app. They can create, edit, and delete products. They can also add tables, edit the tables (table numbers), and delete them. Employee users, after signing up, have access to the main menu. On the top left side is the User Profile button, users can edit and update their information. The tables are in the middle of the main menu, right under the company logo. “TABLE10” “TABLE11”",
     "developed_at": "",
     "demo": "https://www.youtube.com/embed/JYbe-mDsMcU",
     "images": [
-      { "image_id": "projects/ot2_stmumv", "description": null },
-      { "image_id": "projects/ot3_vjnp1a", "description": null }
+      {
+        "image_id": "projects/ot2_stmumv",
+        "description": null
+      },
+      {
+        "image_id": "projects/ot3_vjnp1a",
+        "description": null
+      }
     ],
-    "techologies": ["ruby-rails", "html", "css", "postgresql"]
+    "techologies": [
+      "ruby-rails",
+      "html",
+      "css",
+      "postgresql"
+    ]
   }
 ]

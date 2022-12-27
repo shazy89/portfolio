@@ -6,7 +6,7 @@ import { Screen } from './layout/containers/screen'
 
 import { Projects } from 'data/queries.definitions'
 import { Project } from './project'
-import { Heading } from './heading/heading'
+import { Heading } from './typography/heading'
 import { Area } from './layout/containers/area'
 import { graphql, useStaticQuery } from 'gatsby'
 import { AnimatedSlideItem, AnimatedSlide, Direction } from './animated-slide'

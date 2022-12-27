@@ -12,6 +12,7 @@ export type HeadingSize = typeof headingSizes[number]
 export type HeadingProps = {
   size?: HeadingSize
   whiteSpace?: SpaceName
+  centerAlign?: boolean
   tag: HeadingTag
   color?: Color
   id?: string
@@ -42,6 +43,7 @@ export const Heading = ({
   id,
   size,
   tag: Tag,
+  centerAlign,
   whiteSpace,
 }: React.PropsWithChildren<HeadingProps>) => {
   return (
@@ -50,7 +52,11 @@ export const Heading = ({
       className={cx(
         size ? headingSizeMap[size] : headings[Tag],
         heading,
-        css({ color: theme.color[color], textIndent: whiteSpace && theme.space[whiteSpace] })
+        css({
+          color: theme.color[color],
+          textIndent: whiteSpace && theme.space[whiteSpace],
+          textAlign: centerAlign ? 'center' : 'left',
+        })
       )}
     >
       {children}
