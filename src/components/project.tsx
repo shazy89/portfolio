@@ -8,6 +8,8 @@ import { scale } from '@cloudinary/url-gen/actions/resize'
 import { AdvancedImage, lazyload, placeholder } from '@cloudinary/react'
 import React from 'react'
 import DOMPurify from 'dompurify'
+import { Icon } from 'icon/icon'
+import { IconName, iconMap } from 'icon/generated'
 import { Heading } from './typography/heading'
 
 type Project = {
@@ -39,6 +41,13 @@ export const Project = ({ project }: Project) => {
               }}
             />
           </Text>
+          <Area direction='row'>
+            {project.node.techologies.map(icon => {
+              if (iconMap[icon as IconName]) {
+                return <Icon key={icon} color='text' size='s900' name={icon as IconName} />
+              }
+            })}
+          </Area>
         </Area>
       </div>
     </>
