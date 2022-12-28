@@ -2,7 +2,7 @@ import { button, anchorStyles } from './button.styles'
 import * as React from 'react'
 import { cx } from '@emotion/css'
 import { Color, FontSize } from 'theme/definitions'
-import { Icon } from 'icon/icon'
+import { Icon, IconSize } from 'icon/icon'
 import { IconName } from 'icon/generated/index'
 import { ScreenId } from 'components/layout/containers/container.definitions'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
@@ -33,17 +33,28 @@ export const AnchorButton = ({ to, children }: AnchorButtonProps) => {
   )
 }
 
+type SizeKeys = 'sm' | 'md' | 'lg'
+type Sizes = 's400' | 's600' | 's900'
+
+const anchorButtonsizes: Record<SizeKeys, Sizes> = {
+  sm: 's400',
+  md: 's600',
+  lg: 's900',
+}
+
 type ExternalAnchorButtonProps = {
   to: string
   iconName: IconName
+  size?: SizeKeys
   label: string
+  children?: React.ReactNode
 }
 
 export const ExternalAnchorButton = React.forwardRef<HTMLAnchorElement, ExternalAnchorButtonProps>(
-  ({ to, iconName, label, ...rest }: ExternalAnchorButtonProps, ref) => {
+  ({ to, iconName, label, children, size = 'lg', ...rest }: ExternalAnchorButtonProps, ref) => {
     return (
       <a
-        className={cx(anchorStyles)}
+        className={cx(anchorStyles, children ? button : undefined)}
         href={to}
         ref={ref}
         rel='noopener noreferrer'
@@ -51,7 +62,8 @@ export const ExternalAnchorButton = React.forwardRef<HTMLAnchorElement, External
         aria-label={label}
         {...rest}
       >
-        {iconName && <Icon name={iconName} size='s900' color='icon' />}
+        {iconName && <Icon name={iconName} size={anchorButtonsizes[size]} color='icon' />}
+        <span>{children}</span>
       </a>
     )
   }

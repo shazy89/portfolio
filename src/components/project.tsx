@@ -8,6 +8,7 @@ import { scale } from '@cloudinary/url-gen/actions/resize'
 import { AdvancedImage, lazyload, placeholder } from '@cloudinary/react'
 import React from 'react'
 import DOMPurify from 'dompurify'
+import { AnchorButton, ExternalAnchorButton } from './button/button'
 import { Icon } from 'icon/icon'
 import { IconName, iconMap } from 'icon/generated'
 import { Heading } from './typography/heading'
@@ -47,6 +48,18 @@ export const Project = ({ project }: Project) => {
                 return <Icon key={icon} color='text' size='s900' name={icon as IconName} />
               }
             })}
+          </Area>
+          <Area direction='row' justifyContent='flex-start'>
+            {project.node.github && (
+              <ExternalAnchorButton size='sm' to={project.node.github} iconName='github' label={'Github'}>
+                Github
+              </ExternalAnchorButton>
+            )}
+            {project.node.demo && (
+              <ExternalAnchorButton size='sm' to={project.node.demo} iconName='github' label={'Github'}>
+                Youtube
+              </ExternalAnchorButton>
+            )}
           </Area>
         </Area>
       </div>
