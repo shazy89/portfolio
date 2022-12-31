@@ -21,6 +21,7 @@ export const ProjectImage = ({ image }: ProjectImageProps) => {
 
   return (
     <AdvancedImage
+      width={450}
       cldImg={displayImage}
       plugins={[lazyload(), placeholder({ mode: 'predominant-color' })]}
       alt={image.description}
