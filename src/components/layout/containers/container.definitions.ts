@@ -7,5 +7,5 @@ export type ScreenOptions = {
   backgroundColor: 'gray200' | 'black'
 }
 
-const screenIds = ['heading-screen', 'portfolio-screen'] as const
+const screenIds = ['heading-screen', 'portfolio-screen', 'about-me-screen'] as const
 export type ScreenId = typeof screenIds[number]

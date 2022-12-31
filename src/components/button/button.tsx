@@ -2,7 +2,7 @@ import { button, anchorStyles } from './button.styles'
 import * as React from 'react'
 import { cx } from '@emotion/css'
 import { Color, FontSize } from 'theme/definitions'
-import { Icon, IconSize } from 'icon/icon'
+import { Icon } from 'icon/icon'
 import { IconName } from 'icon/generated/index'
 import { ScreenId } from 'components/layout/containers/container.definitions'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
@@ -33,22 +33,23 @@ export const AnchorButton = ({ to, children }: AnchorButtonProps) => {
   )
 }
 
-type SizeKeys = 'sm' | 'md' | 'lg'
-type Sizes = 's400' | 's600' | 's900'
+export type AnchorButtonSizeKeys = 'sm' | 'md' | 'lg'
+export type AnchorButtonSizes = 's400' | 's600' | 's900'
 
-const anchorButtonsizes: Record<SizeKeys, Sizes> = {
+const anchorButtonsizes: Record<AnchorButtonSizeKeys, AnchorButtonSizes> = {
   sm: 's400',
   md: 's600',
   lg: 's900',
 }
 
-type ExternalAnchorButtonProps = {
+type ExternalAnchorBaseProps = {
   to: string
   iconName: IconName
-  size?: SizeKeys
+  size?: AnchorButtonSizeKeys
   label: string
   children?: React.ReactNode
 }
+type ExternalAnchorButtonProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & ExternalAnchorBaseProps
 
 export const ExternalAnchorButton = React.forwardRef<HTMLAnchorElement, ExternalAnchorButtonProps>(
   ({ to, iconName, label, children, size = 'lg', ...rest }: ExternalAnchorButtonProps, ref) => {
@@ -71,15 +72,18 @@ export const ExternalAnchorButton = React.forwardRef<HTMLAnchorElement, External
 
 type IconButtonProps = {
   iconColor: Color
-  size: FontSize
+  size: AnchorButtonSizeKeys
   iconName: IconName
-}
+  label: string
+  children?: React.ReactNode
+} & React.ButtonHTMLAttributes<HTMLButtonElement>
 
 export const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
-  ({ iconColor, size, ...rest }: IconButtonProps, ref) => {
+  ({ iconColor, iconName, size, label, children, ...rest }: IconButtonProps, ref) => {
     return (
-      <button ref={ref} {...rest}>
-        HEY
+      <button ref={ref} aria-label={label} {...rest}>
+        {children}
+        <Icon name={iconName} size={anchorButtonsizes[size]} color={iconColor} />
       </button>
     )
   }

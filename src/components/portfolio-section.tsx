@@ -1,9 +1,8 @@
 import * as React from 'react'
 import { arrow, container } from './portfolio-section.styles'
-import { Icon } from 'icon/icon'
 import { ProgressBar } from './progress-bar'
 import { Screen } from './layout/containers/screen'
-
+import { IconButton } from './button/button'
 import { Projects } from 'data/queries.definitions'
 import { Project } from './project'
 import { Heading } from './typography/heading'
@@ -40,7 +39,7 @@ export const PortfolioSection = () => {
   const [direction, setDirection] = React.useState<Direction>('out')
 
   const allProjects = projects.allProjectsJson.edges
-  console.log(allProjects)
+
   const handleNext = () =>
     setActiveIndex(step => {
       if (step < allProjects.length - 1) {
@@ -79,11 +78,23 @@ export const PortfolioSection = () => {
             ) : null
           )}
         </AnimatedSlide>
-        <div className={arrow('left')} onClick={handleBack}>
-          <Icon name='circle-left-solid' size='s900' color='yellow100' />
+        <div className={arrow('left')}>
+          <IconButton
+            onClick={handleBack}
+            iconColor={'yellow100'}
+            size={'lg'}
+            iconName={'circle-left-solid'}
+            label={'scroll left button'}
+          />
         </div>
-        <div className={arrow('right')} onClick={handleNext}>
-          <Icon name='circle-right-solid' size='s900' color='yellow100' />
+        <div className={arrow('right')}>
+          <IconButton
+            onClick={handleNext}
+            iconColor={'yellow100'}
+            size={'lg'}
+            iconName={'circle-right-solid'}
+            label={'scroll left button'}
+          />
         </div>
       </div>
     </Screen>

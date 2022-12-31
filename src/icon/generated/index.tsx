@@ -19,6 +19,7 @@ import { default as Redux } from './redux'
 import { default as RubyRails } from './ruby-rails'
 import { default as Sass } from './sass'
 import { default as Typescript } from './typescript'
+import { default as Youtube } from './youtube'
 
 export const iconNames = [
 'bootstrap',
@@ -38,7 +39,8 @@ export const iconNames = [
 'redux',
 'ruby-rails',
 'sass',
-'typescript'
+'typescript',
+'youtube'
 ] as const
 
 export type IconName = typeof iconNames[number]
@@ -61,6 +63,7 @@ export const iconMap: Record<IconName, FunctionComponent<SVGProps<any>>> = {
 'redux': Redux,
 'ruby-rails': RubyRails,
 'sass': Sass,
-'typescript': Typescript
+'typescript': Typescript,
+'youtube': Youtube
 }
   

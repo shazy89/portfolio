@@ -4,7 +4,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { MediaLinks } from 'components/media-links'
 import { Intro } from 'components/intro'
 import { HeadingScreenContent } from 'components/heading-section-content'
-import React from 'react'
+import { AboutMe } from 'components/about-me'
 import { PortfolioSection } from 'components/portfolio-section'
 import { Screen } from 'components/layout/containers/screen'
 import { Page } from 'components/layout/containers/page'
@@ -35,6 +35,8 @@ const IndexPage = () => {
         </Screen>
 
         <PortfolioSection />
+
+        <AboutMe />
       </Area>
     </Page>
   )

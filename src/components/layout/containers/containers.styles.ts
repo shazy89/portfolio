@@ -1,7 +1,6 @@
 import { css, injectGlobal } from '@emotion/css'
 import { ScreenOptions } from './container.definitions'
 import { theme } from 'theme'
-import { relative } from 'path'
 
 injectGlobal`
 body {
