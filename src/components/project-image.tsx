@@ -3,6 +3,8 @@ import { Project } from './project'
 import { Cloudinary } from '@cloudinary/url-gen'
 import { scale } from '@cloudinary/url-gen/actions/resize'
 
+const imageWidth = 460
+
 type ProjectImageProps = {
   image: Project['project']['node']['images'][number]
 }
@@ -16,12 +18,12 @@ export const ProjectImage = ({ image }: ProjectImageProps) => {
     },
   })
 
-  const displayImage = cloud.image(image.image_id).resize(scale().width(450))
-  //modes: 'vectorize' | 'pixelate' | 'blur' | 'predominant-color'.
+  const displayImage = cloud.image(image.image_id).resize(scale().width(imageWidth))
 
+  //modes: 'vectorize' | 'pixelate' | 'blur' | 'predominant-color'.
   return (
     <AdvancedImage
-      width={450}
+      width={imageWidth}
       cldImg={displayImage}
       plugins={[lazyload(), placeholder({ mode: 'predominant-color' })]}
       alt={image.description}
