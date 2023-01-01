@@ -3,7 +3,7 @@ import { Text } from './typography/text'
 import { line } from './project.styles'
 import { Projects } from 'data/queries.definitions'
 import { container, projectHeading } from './project.styles'
-import DOMPurify from 'dompurify'
+
 import { ExternalAnchorButton } from './button/button'
 import { Icon } from 'icon/icon'
 import { IconName, iconMap } from 'icon/generated'
@@ -15,8 +15,6 @@ export type Project = {
 }
 
 export const Project = ({ project }: Project) => {
-  const info = DOMPurify.sanitize(project.node.info)
-
   return (
     <div className={container}>
       <Area gap='s600' justifyContent='center'>
@@ -34,7 +32,7 @@ export const Project = ({ project }: Project) => {
         <Text tag='p' size='s400'>
           <span
             dangerouslySetInnerHTML={{
-              __html: info,
+              __html: project.node.info,
             }}
           />
         </Text>
