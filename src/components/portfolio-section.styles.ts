@@ -16,7 +16,6 @@ export const arrow = (position: Position) => css`
   justify-content: center;
   align-items: center;
   user-select: none;
-  cursor: pointer;
   z-index: 2;
   ${position}: 0px;
 `

@@ -13,6 +13,7 @@ export type AreaProps = {
   gap?: SpaceName
   justifyContent?: Property.JustifyContent
   wrap?: Property.FlexWrap
+  height?: Property.Height
 }
 
 export const area = ({
@@ -25,6 +26,7 @@ export const area = ({
   justifyContent,
   wrap,
   padding,
+  height,
 }: AreaProps) =>
   css({
     alignItems: alignItems && alignItems,
@@ -37,6 +39,7 @@ export const area = ({
     gap: theme.space[gap],
     justifyContent: justifyContent && justifyContent,
     padding: padding && theme.space[padding],
+    height: height && height,
   })
 
 type AreaPropsWithChildren = AreaProps & {

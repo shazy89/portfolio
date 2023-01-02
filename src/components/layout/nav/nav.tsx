@@ -24,7 +24,7 @@ export const Nav = ({ listTitle }: NavProps) => {
               <AnchorButton to='/#portfolio-screen'>Portfolio</AnchorButton>
             </li>
             <li>
-              <AnchorButton to='/#heading-screen'>About</AnchorButton>
+              <AnchorButton to='/#about-me-screen'>About</AnchorButton>
             </li>
           </Area>
         </ul>
