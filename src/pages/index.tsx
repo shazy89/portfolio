@@ -1,4 +1,5 @@
 import { Nav } from 'components/layout/nav/nav'
+import { SEO } from 'components/seo'
 import '../assets/reset.css'
 import { StaticImage } from 'gatsby-plugin-image'
 import { MediaLinks } from 'components/media-links'
@@ -41,3 +42,5 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+export const Head = () => <SEO />
