@@ -1,7 +1,7 @@
 import { SVGProps } from 'react'
 
 export const Logo = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox='0 0 207 93' xmlns='http://www.w3.org/2000/svg' {...props}>
+  <svg viewBox='0 0 207 93' xmlns='http://www.w3.org/2000/svg' width="9rem" {...props}>
     <path d='M0.674377 41.4902L59.9814 40.9777' stroke='#F1C40E' strokeWidth='8' />
     <path d='M147.656 42.0116L206.962 41.4902' stroke='#F1C40E' strokeWidth='8' />
     <path

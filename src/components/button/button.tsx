@@ -14,7 +14,7 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & BaseProps
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ children, ...rest }: React.PropsWithChildren<ButtonProps>, ref) => (
-    <button className={button} ref={ref} type='button' {...rest}>
+    <button role="button" aria-label='' title="" className={button}  ref={ref} type='button' {...rest}>
       {children}
     </button>
   )
