@@ -1,5 +1,6 @@
 import { BorderKey } from 'theme/definitions'
-import { BoxBorder } from './containers.styles'
+
+export type BoxBorder = 'primary'
 
 export type ScreenOptions = {
   border?: BoxBorder
@@ -7,5 +8,5 @@ export type ScreenOptions = {
   backgroundColor: 'gray200' | 'black'
 }
 
-const screenIds = ['heading-screen', 'portfolio-screen', 'about-me-screen'] as const
+const screenIds = ['heading-screen', 'portfolio-screen', 'about-me-screen', 'footer'] as const
 export type ScreenId = typeof screenIds[number]
