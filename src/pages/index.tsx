@@ -11,7 +11,6 @@ import { Screen } from 'components/layout/containers/screen'
 import { Footer } from 'components/layout/containers/footer'
 import { Page } from 'components/layout/containers/page'
 import { Area } from 'components/layout/containers/area'
-import React from 'react'
 
 const imageWidth = 365
 const headingImage = '../images/ed-shaziman.png'

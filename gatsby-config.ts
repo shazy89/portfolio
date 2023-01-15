@@ -5,10 +5,10 @@ require('dotenv').config({
 })
 
 const config: GatsbyConfig = {
-  /*   siteMetadata: {
+  siteMetadata: {
     title: `My Gatsby Site`,
     siteUrl: `https://www.yourdomain.tld`,
-  }, */
+  },
 
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -42,7 +42,7 @@ const config: GatsbyConfig = {
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: 'standalone',
-        icon: 'src/images/icon.png',
+        icon: 'src/images/logo.svg',
       },
     },
     `gatsby-transformer-sharp`,

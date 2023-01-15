@@ -4,7 +4,7 @@ import * as React from 'react'
 
 type ScreenProps = ScreenOptions & {
   children: React.ReactNode
-  screenId: ScreenId
+  screenId?: ScreenId
 }
 
 export const Screen = ({ children, border, borderRadius, backgroundColor, screenId }: ScreenProps) => {

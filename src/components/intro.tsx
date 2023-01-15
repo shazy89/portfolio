@@ -1,6 +1,7 @@
 import { Area } from './layout/containers/area'
 import { Heading } from './typography/heading'
 import { Button } from 'components/button/button'
+import { AnchorButton } from 'components/button/button'
 import { heading, container, verticalLine } from './intro.styles'
 import React from 'react'
 
@@ -14,7 +15,7 @@ export const Intro = () => {
             based in the New York Metro Area
           </Heading>
         </div>
-        <Button>Learn More</Button>
+        <AnchorButton to='/#about-me-screen'>Learn More</AnchorButton>
       </Area>
       <Area gap='s100'>
         <Heading tag='h2' size='700'>

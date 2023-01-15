@@ -16,7 +16,7 @@ export const SEO = ({ children }: SEOProps) => (
     />
     <meta name='author' content='Erdoan Shaziman' />
     <meta name='robots' content='index, follow' />
-    <link rel='canonical' href='https://www.example.com/webpage' />
+    <link rel='canonical' href='https://edshaziman.com/' />
     {children}
   </>
 )
