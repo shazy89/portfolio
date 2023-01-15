@@ -1,7 +1,7 @@
 import { button, anchorStyles } from './button.styles'
 import * as React from 'react'
 import { cx } from '@emotion/css'
-import { Color, FontSize } from 'theme/definitions'
+import { Color } from 'theme/definitions'
 import { Icon } from 'icon/icon'
 import { IconName } from 'icon/generated/index'
 import { ScreenId } from 'components/layout/containers/container.definitions'
@@ -14,7 +14,7 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & BaseProps
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ children, ...rest }: React.PropsWithChildren<ButtonProps>, ref) => (
-    <button role="button" aria-label='' title="" className={button}  ref={ref} type='button' {...rest}>
+    <button role='button' aria-label='' title='' className={button} ref={ref} type='button' {...rest}>
       {children}
     </button>
   )
@@ -44,7 +44,7 @@ const anchorButtonsizes: Record<AnchorButtonSizeKeys, AnchorButtonSizes> = {
 
 type ExternalAnchorBaseProps = {
   to: string
-  iconName: IconName
+  iconName?: IconName
   size?: AnchorButtonSizeKeys
   label: string
   children?: React.ReactNode

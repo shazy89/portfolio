@@ -5,7 +5,7 @@ require('dotenv').config({
 })
 
 const config: GatsbyConfig = {
-/*   siteMetadata: {
+  /*   siteMetadata: {
     title: `My Gatsby Site`,
     siteUrl: `https://www.yourdomain.tld`,
   }, */
@@ -52,6 +52,7 @@ const config: GatsbyConfig = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-anchor-links`,
     `gatsby-plugin-image`,
+    `gatsby-transformer-remark`,
   ],
 }
 

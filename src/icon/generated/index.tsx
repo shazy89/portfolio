@@ -9,6 +9,7 @@ import { default as ExpressJs } from './express-js'
 import { default as Facebook } from './facebook'
 import { default as GatsbyJs } from './gatsby-js'
 import { default as Github } from './github'
+import { default as Graphql } from './graphql'
 import { default as Html } from './html'
 import { default as Instagram } from './instagram'
 import { default as Javascript } from './javascript'
@@ -32,6 +33,7 @@ export const iconNames = [
 'facebook',
 'gatsby-js',
 'github',
+'graphql',
 'html',
 'instagram',
 'javascript',
@@ -58,6 +60,7 @@ export const iconMap: Record<IconName, FunctionComponent<SVGProps<any>>> = {
 'facebook': Facebook,
 'gatsby-js': GatsbyJs,
 'github': Github,
+'graphql': Graphql,
 'html': Html,
 'instagram': Instagram,
 'javascript': Javascript,

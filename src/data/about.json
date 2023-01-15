@@ -1,7 +1,7 @@
 [{
   "email": "erdo.shazy123@gmail.com",
   "about_me": "Highly analytical and technical-minded professional with hands-on experience and comprehensive knowledge across software engineering, including full-stack web development, databases, cloud infrastructure, and mobile application development. Expert at designing and building responsive websites with interactive layouts and always ensures to write reusable and clean code.<br/><br/>  When I’m not coding, you can find me either playing video games or gone skiing if it’s wintertime. I love talking about motorcycles and the adrenaline it gives me when riding them! Some other hobbies I have are Traveling, Movies, Cooking, and learning new skills.",
-  "software_skills": [{"icon": "javascript", "skill": "Javascript"}, {"icon": "typescript", "skill": "TypeScript"}, {"icon": "react","skill": "React"}, {"icon": "react", "skill": "React Native"}, {"icon": "redux", "skill": "Redux"}, {"icon": "express-js", "skill": "Express.js"}, {"icon": "node-js", "skill": "Node.js"},{"icon": "mongo","skill": "MongoDB"}, {"icon": "css","skill": "CSS"}],
+  "software_skills": [{"icon": "javascript", "skill": "Javascript"}, {"icon": "typescript", "skill": "TypeScript"}, {"icon": "react","skill": "React"}, {"icon": "react", "skill": "React Native"}, {"icon": "redux", "skill": "Redux"}, {"icon": "express-js", "skill": "Express.js"}, {"icon": "node-js", "skill": "Node.js"},{"icon": "mongo","skill": "MongoDB"}, {"icon": "css","skill": "CSS"}, {"icon": "graphql", "skill": "GraphQL"}],
   "languages": ["English", "Macedonian", "Turkish", "Serbian"],
   "personal_skills": ["Leadership", "Organization", "Creativity", "Team Work", "UX/UI Design", "Requirements Gathering"]
 }]
