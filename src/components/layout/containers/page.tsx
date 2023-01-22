@@ -6,5 +6,9 @@ interface PageProps {
 }
 
 export const Page = ({ children }: PageProps) => {
-  return <main className={page}>{children}</main>
+  return (
+    <main className={page} id='app-wrapper'>
+      {children}
+    </main>
+  )
 }

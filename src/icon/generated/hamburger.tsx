@@ -1,0 +1,3 @@
+import { SVGProps } from "react";
+const SvgHamburger = (props: SVGProps<SVGSVGElement>) => <svg viewBox="0 0 51 36" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" {...props}><path transform="matrix(.9998 -.02 .00744 .99997 1 6)" stroke="#F1C40E" strokeWidth={5} d="M0-2.5h50.01" /><path transform="matrix(.9998 -.02 .00744 .99997 1 21)" stroke="#F1C40E" strokeWidth={5} d="M0-2.5h50.01" /><path transform="matrix(.9998 -.02 .00744 .99997 1 36)" stroke="#F1C40E" strokeWidth={5} d="M0-2.5h50.01" /><path transform="matrix(.9998 -.02 .00744 .99997 1 6)" stroke="#F1C40E" strokeWidth={5} d="M0-2.5h50.01" /></svg>;
+export default SvgHamburger;
