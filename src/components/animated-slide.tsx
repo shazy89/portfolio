@@ -49,14 +49,14 @@ type AnimatedSlideItemProps = {
   children: React.ReactNode
   direction?: Direction
   onAnimationComplete?: () => void
-  key: string
+  animationKey: string
 }
 
 export const AnimatedSlideItem = React.forwardRef<HTMLDivElement, AnimatedSlideItemProps>(
-  ({ children, key, direction, onAnimationComplete, ...rest }: AnimatedSlideItemProps, ref) => {
+  ({ children, animationKey, direction, onAnimationComplete, ...rest }: AnimatedSlideItemProps, ref) => {
     return (
       <motion.div
-        key={key}
+        key={animationKey}
         variants={variants}
         custom={direction}
         initial='enter'

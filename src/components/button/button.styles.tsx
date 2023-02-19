@@ -1,4 +1,5 @@
 import { theme } from 'theme'
+import { mq } from 'components/mixins/media-queries'
 import { css } from '@emotion/css'
 
 export const button = css`
@@ -13,8 +14,14 @@ export const button = css`
   justify-content: center;
   padding: ${theme.space.s300} ${theme.space.s400};
   white-space: nowrap;
-  min-width: 11rem;
   box-shadow: 0px 0px 3px #e2e2e2;
+
+  ${mq.mobile} {
+    min-width: 8rem;
+  }
+  ${mq.desktop} {
+    min-width: 11rem;
+  }
 
   :disabled {
     cursor: not-allowed;

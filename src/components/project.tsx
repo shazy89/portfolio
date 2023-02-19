@@ -65,7 +65,7 @@ export const ProjectMobileView = ({ project }: Project) => (
         {project.node.projectName}
       </Heading>
     </div>
-    <ProjectImage key={project.node.images[0].image_id} image={project.node.images[0]} />
+    <ProjectImage image={project.node.images[0]} />
     <Text tag='p' size='s300'>
       <span
         dangerouslySetInnerHTML={{
@@ -76,7 +76,7 @@ export const ProjectMobileView = ({ project }: Project) => (
     <Area direction='row'>
       {project.node.techologies.map(icon => {
         if (iconMap[icon as IconName]) {
-          return <Icon key={icon} color='text' size='s900' name={icon as IconName} />
+          return <Icon key={icon} color='text' size='s600' name={icon as IconName} />
         }
       })}
     </Area>

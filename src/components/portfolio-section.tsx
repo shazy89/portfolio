@@ -75,7 +75,7 @@ export const PortfolioSection = () => {
             <AnimatedSlide direction={direction}>
               {allProjects.map((data, index) =>
                 activeIndex === index ? (
-                  <AnimatedSlideItem key={data.node.projectName}>
+                  <AnimatedSlideItem key={data.node.projectName} animationKey={data.node.projectName}>
                     <Project project={data} />
                   </AnimatedSlideItem>
                 ) : null
@@ -106,7 +106,7 @@ export const PortfolioSection = () => {
           <div className={container}>
             {allProjects.map((data, index) =>
               activeIndex === index ? (
-                <AnimatedSlideItem key={data.node.projectName}>
+                <AnimatedSlideItem key={data.node.projectName} animationKey={data.node.projectName}>
                   <ProjectMobileView project={data} />
                 </AnimatedSlideItem>
               ) : null
