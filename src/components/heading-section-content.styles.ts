@@ -1,6 +1,5 @@
 import { theme } from 'theme'
 import { css } from '@emotion/css'
-import { mq } from 'components/mixins/media-queries'
 
 export const container = css`
   /* nav height 4rem */

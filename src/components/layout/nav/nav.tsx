@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { cx } from '@emotion/css'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Logo } from 'images/logo'
 import { IconButton } from 'components/button/button'
 import { Screen } from '../containers/screen'

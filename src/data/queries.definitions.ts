@@ -10,6 +10,7 @@ type ProjectData = {
     techologies: string[]
     images: [
       {
+        image: { description: string; image_id: string }
         description: string
         image_id: string
       }
