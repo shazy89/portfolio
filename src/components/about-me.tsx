@@ -10,6 +10,7 @@ import { ProjectImage } from './project-image'
 import { about, image } from './about-me.styles'
 import { graphql, useStaticQuery } from 'gatsby'
 import { AboutMeData } from './about-me.definitions'
+import { Responsive } from './responsive'
 
 const aboutMeImage = '../images/ed-about-me.png'
 
@@ -37,85 +38,166 @@ export const AboutMeSection = () => {
 
   return (
     <Screen backgroundColor='gray200' screenId='about-me-screen'>
-      <Area direction='row' height='100%' gap='s800'>
-        <div className={about}>
+      <Responsive screenSize={['desktop', 'tablet']}>
+        <Area direction='row' height='100%' gap='s800'>
+          <div className={about}>
+            <Area gap='none'>
+              <Heading tag='h2' size='700' centerAlign>
+                About
+              </Heading>
+              <Copy text={aboutMeData.aboutJson.email}>{aboutMeData.aboutJson.email}</Copy>
+            </Area>
+            <Text tag='p' size='s400'>
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: aboutMeData.aboutJson.about_me,
+                }}
+              />
+            </Text>
+          </div>
+          <Area direction='row' padding='s400' alignItems='center'>
+            <Area gap='s600'>
+              <Area gap='s500'>
+                <Heading tag='h3'>Software Skills</Heading>
+                <Area direction='row' gap='s800'>
+                  <Area>
+                    {softwareSkillsColumn1.map(sk => (
+                      <Area key={sk.skill} direction='row' alignItems='center'>
+                        <Icon color='text' size='s700' name={sk.icon as any} /> <Text>{sk.skill}</Text>{' '}
+                      </Area>
+                    ))}
+                  </Area>
+                  <Area>
+                    {softwareSkillsColumn2.map(sk => (
+                      <Area key={sk.skill} direction='row' alignItems='center'>
+                        <Icon color='text' size='s700' name={sk.icon as any} /> <Text>{sk.skill}</Text>{' '}
+                      </Area>
+                    ))}
+                  </Area>
+                </Area>
+              </Area>
+              <Area>
+                <Heading tag='h3'>Languages</Heading>
+                <ul>
+                  {aboutMeData.aboutJson.languages.map(l => (
+                    <li className={css({ listStyleType: 'circle' })} key={l}>
+                      {<Text tag='span'>- {l}</Text>}
+                    </li>
+                  ))}
+                </ul>
+              </Area>
+              <Area>
+                <Heading tag='h3'>Personal Skills</Heading>
+                <Area direction='row'>
+                  <ul>
+                    {personalSkills1.map(sk => (
+                      <li key={sk}>
+                        <Text tag='span'>- {sk}</Text>
+                      </li>
+                    ))}
+                  </ul>
+                  <ul>
+                    {personalSkills2.map(sk => (
+                      <li key={sk}>
+                        <Text tag='span'>- {sk}</Text>
+                      </li>
+                    ))}
+                  </ul>
+                </Area>
+              </Area>
+            </Area>
+            <div className={image}>
+              <StaticImage
+                src={aboutMeImage}
+                width={400}
+                height={600}
+                placeholder='blurred'
+                layout='fixed'
+                alt='Erdoan Shaziman'
+              />
+            </div>
+          </Area>
+        </Area>
+      </Responsive>
+      <Responsive screenSize={'mobile'}>
+        <Area>
           <Area gap='none'>
-            <Heading tag='h1' size='700' centerAlign>
+            <Heading tag='h2' size='500' centerAlign>
               About
             </Heading>
             <Copy text={aboutMeData.aboutJson.email}>{aboutMeData.aboutJson.email}</Copy>
           </Area>
-          <Text tag='p' size='s400'>
+          <Text tag='p' size='s200'>
             <span
               dangerouslySetInnerHTML={{
                 __html: aboutMeData.aboutJson.about_me,
               }}
             />
           </Text>
-        </div>
-        <Area direction='row' padding='s400' alignItems='center'>
-          <Area gap='s600'>
-            <Area gap='s500'>
-              <Heading tag='h2'>Software Skills</Heading>
-              <Area direction='row' gap='s800'>
-                <Area>
-                  {softwareSkillsColumn1.map(sk => (
-                    <Area key={sk.skill} direction='row' alignItems='center'>
-                      <Icon color='text' size='s700' name={sk.icon as any} /> <Text>{sk.skill}</Text>{' '}
-                    </Area>
-                  ))}
-                </Area>
-                <Area>
-                  {softwareSkillsColumn2.map(sk => (
-                    <Area key={sk.skill} direction='row' alignItems='center'>
-                      <Icon color='text' size='s700' name={sk.icon as any} /> <Text>{sk.skill}</Text>{' '}
-                    </Area>
-                  ))}
-                </Area>
+          <Area gap='s500'>
+            <Heading tag='h3' size='300' centerAlign>
+              Software Skills
+            </Heading>
+            <Area direction='row' gap='s500' justifyContent='center'>
+              <Area>
+                {softwareSkillsColumn1.map(sk => (
+                  <Area key={sk.skill} direction='row' alignItems='center'>
+                    <Icon color='text' size='s300' name={sk.icon as any} /> <Text>{sk.skill}</Text>{' '}
+                  </Area>
+                ))}
+              </Area>
+              <Area>
+                {softwareSkillsColumn2.map(sk => (
+                  <Area key={sk.skill} direction='row' alignItems='center'>
+                    <Icon color='text' size='s300' name={sk.icon as any} /> <Text>{sk.skill}</Text>{' '}
+                  </Area>
+                ))}
               </Area>
             </Area>
-            <Area>
-              <Heading tag='h2'>Languages</Heading>
-              <ul>
-                {aboutMeData.aboutJson.languages.map(l => (
-                  <li className={css({ listStyleType: 'circle' })} key={l}>
-                    {<Text tag='span'>- {l}</Text>}
-                  </li>
-                ))}
-              </ul>
-            </Area>
-            <Area>
-              <Heading tag='h2'>Personal Skills</Heading>
-              <Area direction='row'>
+            <Area direction='row'>
+              <Area>
+                <Heading tag='h3' size='300'>
+                  Languages
+                </Heading>
                 <ul>
-                  {personalSkills1.map(sk => (
-                    <li key={sk}>
-                      <Text tag='span'>- {sk}</Text>
+                  {aboutMeData.aboutJson.languages.map(l => (
+                    <li className={css({ listStyleType: 'circle' })} key={l}>
+                      <Text size='s200' tag='span'>
+                        - {l}
+                      </Text>
                     </li>
                   ))}
                 </ul>
-                <ul>
-                  {personalSkills2.map(sk => (
-                    <li key={sk}>
-                      <Text tag='span'>- {sk}</Text>
-                    </li>
-                  ))}
-                </ul>
+              </Area>
+              <Area>
+                <Heading tag='h3' size='300'>
+                  Personal Skills
+                </Heading>
+                <Area direction='row'>
+                  <ul>
+                    {personalSkills1.map(sk => (
+                      <li key={sk}>
+                        <Text size='s200' tag='span'>
+                          - {sk}
+                        </Text>
+                      </li>
+                    ))}
+                  </ul>
+                  <ul>
+                    {personalSkills2.map(sk => (
+                      <li key={sk}>
+                        <Text size='s200' tag='span'>
+                          - {sk}
+                        </Text>
+                      </li>
+                    ))}
+                  </ul>
+                </Area>
               </Area>
             </Area>
           </Area>
-          <div className={image}>
-            <StaticImage
-              src={aboutMeImage}
-              width={400}
-              height={600}
-              placeholder='blurred'
-              layout='fixed'
-              alt='Erdoan Shaziman'
-            />
-          </div>
         </Area>
-      </Area>
+      </Responsive>
     </Screen>
   )
 }

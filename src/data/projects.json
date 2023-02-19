@@ -30,7 +30,7 @@
     "projectName": "Culina",
     "github": "https://github.com/shazy89/culina-dashboard",
     "link": "https://culina.website/",
-    "info": "Dashboard of a Saas construction App. Admin users can add new companies and manage current companies. Each company can have employee users added to them. Projects and work orders can be created to track ongoing work. Charts are displayed to show revenue, total employee count, total user count, and total project data. <br/><br/>A small portion of this app is finished, and more is to come. Clients will be able to track the company trucks, and the shared tools also will have a preview of what materials the track has and what materials are picked up from the warehouse daily <br/><br/> Culina is a MERN stack app and is a practice project. It's not being used in the real world.",
+    "info": "Dashboard of a Saas construction App. Admin users can add new companies and manage current companies. Each company can have employee users added to them. Projects and work orders can be created to track ongoing work. Charts are displayed to show revenue, total employee count, total user count, and total project data. <br/>A small portion of this app is finished, and more is to come. Clients will be able to track the company trucks, and the shared tools also will have a preview of what materials the track has and what materials are picked up from the warehouse daily <br/><br/> Culina is a MERN stack app and is a practice project. It's not being used in the real world.",
     "developed_at": "",
     "demo": "https://www.youtube.com/watch?v=yfwoDKNhJQg&list=PL0zbnzgKNis1xNPhk3jmGx_KhQgK1SzaS&index=13",
     "images": [
