@@ -2,6 +2,8 @@ import * as React from 'react'
 
 import { breakpointMinWidths } from 'components/mixins/media-queries'
 
+const isBrowser = () => typeof window !== 'undefined'
+
 type ScreenSizeContextValue = {
   isMobile: boolean
   isTablet: boolean
@@ -10,19 +12,20 @@ type ScreenSizeContextValue = {
 
 export const screenSizeContext = React.createContext<ScreenSizeContextValue | undefined>(undefined)
 
-
 export const ScreenSizeProvider = ({ children }: React.PropsWithChildren<unknown>) => {
-  const [width, setWidth] = React.useState(window.innerWidth)
+  const [width, setWidth] = React.useState(isBrowser() ? window.innerWidth : 0)
 
   React.useEffect(() => {
     function handleResize() {
-      setWidth(window.innerWidth)
+      setWidth(isBrowser() ? window.innerWidth : 0)
     }
 
-    window.addEventListener('resize', handleResize)
+    if (isBrowser()) {
+      window.addEventListener('resize', handleResize)
 
-    return () => {
-      window.removeEventListener('resize', handleResize)
+      return () => {
+        window.removeEventListener('resize', handleResize)
+      }
     }
   }, [])
 
