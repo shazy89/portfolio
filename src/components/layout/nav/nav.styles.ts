@@ -54,3 +54,11 @@ export const mobileNavMenu = css`
 export const noScroll = css`
   overflow: hidden;
 `
+
+export const mobileMenuList = css`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+`

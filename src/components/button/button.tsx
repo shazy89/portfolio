@@ -23,11 +23,12 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 type AnchorButtonProps = {
   to: `/#${ScreenId}`
   children?: React.ReactNode
+  onClick?: () => void
 }
 
-export const AnchorButton = ({ to, children }: AnchorButtonProps) => {
+export const AnchorButton = ({ to, children, onClick }: AnchorButtonProps) => {
   return (
-    <AnchorLink className={cx(button, anchorStyles)} to={to}>
+    <AnchorLink onAnchorLinkClick={onClick} className={cx(button, anchorStyles)} to={to}>
       {children}
     </AnchorLink>
   )

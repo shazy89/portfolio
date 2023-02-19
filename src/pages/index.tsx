@@ -1,4 +1,3 @@
-import { css } from '@emotion/css'
 import { SEO } from 'components/seo'
 import '../assets/reset.css'
 import { AboutMeSection } from 'components/about-me'
@@ -9,12 +8,6 @@ import { ScreenSizeProvider } from 'components/providers/screensize-provider'
 import { Footer } from 'components/layout/containers/footer'
 import { Page } from 'components/layout/containers/page'
 import { Area } from 'components/layout/containers/area'
-
-const wrapper = css`
-  display: flex;
-  flex-direction: 'column';
-  gap: 13px;
-`
 
 const IndexPage = () => {
   return (

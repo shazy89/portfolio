@@ -1,4 +1,4 @@
-import { motion, AnimatePresence, AnimatePresenceProps } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import * as React from 'react'
 
 const transitionDuration = 1
