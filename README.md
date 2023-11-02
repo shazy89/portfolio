@@ -1,7 +1,26 @@
-## 🚀 Node Version 18
+## Technologies and Libraries Used
 
-# Deploy to Netlify
+- **Core:**
+  - React.js
+  - Gatsby
 
-1 run yarn build
-2 run netlify deploy
-3 run netlify deploy --prod
+- **Styling and Animation:**
+  - Emotion
+  - Framer Motion
+  
+- **Content Management:**
+  - Cloudinary
+  
+- **Security and Parsing:**
+  - DOMPurify
+  - Marked
+
+- **SEO and Site Management:**
+  - React Helmet
+
+- **Deployment:**
+  - Netlify CLI
+  
+## Additional Notes
+
+This project utilizes several Gatsby plugins to optimize site performance, image rendering, and content management. While they are not explicitly listed above, they play a crucial role in the overall functionality and efficiency of the website.
