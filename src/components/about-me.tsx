@@ -5,9 +5,8 @@ import { Area } from './layout/containers/area'
 import { Text } from './typography/text'
 import { Copy } from './copy'
 import { Icon } from 'icon/icon'
-import { StaticImage } from 'gatsby-plugin-image'
-import { ProjectImage } from './project-image'
-import { about, image } from './about-me.styles'
+/* import { StaticImage } from 'gatsby-plugin-image' */
+import { about } from './about-me.styles'
 import { graphql, useStaticQuery } from 'gatsby'
 import { AboutMeData } from './about-me.definitions'
 import { Responsive } from './responsive'
@@ -25,7 +24,6 @@ export const AboutMeSection = () => {
           skill
         }
         personal_skills
-        languages
       }
     }
   `)
@@ -76,17 +74,7 @@ export const AboutMeSection = () => {
                   </Area>
                 </Area>
               </Area>
-              <Area>
-                <Heading tag='h3'>Languages</Heading>
-                <ul>
-                  {aboutMeData.aboutJson.languages.map(l => (
-                    <li className={css({ listStyleType: 'circle' })} key={l}>
-                      {<Text tag='span'>- {l}</Text>}
-                    </li>
-                  ))}
-                </ul>
-              </Area>
-              <Area>
+              <Area alignItems='center' justifyContent='center'>
                 <Heading tag='h3'>Personal Skills</Heading>
                 <Area direction='row'>
                   <ul>
@@ -106,16 +94,6 @@ export const AboutMeSection = () => {
                 </Area>
               </Area>
             </Area>
-            <div className={image}>
-              <StaticImage
-                src={aboutMeImage}
-                width={400}
-                height={600}
-                placeholder='blurred'
-                layout='fixed'
-                alt='Erdoan Shaziman'
-              />
-            </div>
           </Area>
         </Area>
       </Responsive>
@@ -154,26 +132,11 @@ export const AboutMeSection = () => {
                 ))}
               </Area>
             </Area>
-            <Area direction='row'>
-              <Area>
-                <Heading tag='h3' size='300'>
-                  Languages
-                </Heading>
-                <ul>
-                  {aboutMeData.aboutJson.languages.map(l => (
-                    <li className={css({ listStyleType: 'circle' })} key={l}>
-                      <Text size='s200' tag='span'>
-                        - {l}
-                      </Text>
-                    </li>
-                  ))}
-                </ul>
-              </Area>
-              <Area>
+               <Area alignItems='center' justifyContent='center'>
                 <Heading tag='h3' size='300'>
                   Personal Skills
                 </Heading>
-                <Area direction='row'>
+                <Area direction='row' flex={1} alignItems='center' justifyContent='center'>
                   <ul>
                     {personalSkills1.map(sk => (
                       <li key={sk}>
@@ -193,7 +156,6 @@ export const AboutMeSection = () => {
                     ))}
                   </ul>
                 </Area>
-              </Area>
             </Area>
           </Area>
         </Area>

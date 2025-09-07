@@ -45,13 +45,10 @@ const config: GatsbyConfig = {
         icon: 'src/images/logo.svg',
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-json`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-anchor-links`,
-    `gatsby-plugin-image`,
     `gatsby-transformer-remark`,
   ],
 }

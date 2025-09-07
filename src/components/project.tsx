@@ -3,7 +3,6 @@ import { Text } from './typography/text'
 import { line } from './project.styles'
 import { Projects } from 'data/queries.definitions'
 import { container, projectHeading, mobileContainer } from './project.styles'
-
 import { ExternalAnchorButton } from './button/button'
 import { Icon } from 'icon/icon'
 import { IconName, iconMap } from 'icon/generated'
@@ -51,6 +50,11 @@ export const Project = ({ project }: Project) => (
         {project.node.demo && (
           <ExternalAnchorButton size='sm' to={project.node.demo} iconName='youtube' label={'Github'}>
             Demo
+          </ExternalAnchorButton>
+        )}
+        {project.node.link && (
+          <ExternalAnchorButton size='sm' to={project.node.link}  label={'Live Demo'}>
+            Live Demo
           </ExternalAnchorButton>
         )}
       </Area>

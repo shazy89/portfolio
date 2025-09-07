@@ -23,7 +23,7 @@ export const ProjectImage = ({ image }: ProjectImageProps) => {
 
   const displayImage = cloud.image(image.image_id).resize(scale().width(isMobile ? mobileWidth : imageWidth))
 
-  //modes: 'vectorize' | 'pixelate' | 'blur' | 'predominant-color'.
+
   return (
     <AdvancedImage
       width={isMobile ? mobileWidth : imageWidth}

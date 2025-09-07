@@ -1,10 +1,37 @@
-[
+[{
+  "id": 5,
+  "projectName": "Wealth Wing",
+  "github": "https://github.com/WealthWing/wealth-wing-frontend",
+  "link": "https://wealth-wing.netlify.app/",
+  "info": "Wealth Wing is a personal finance app to track accounts, transactions, subscriptions, and budgets. Users can import CSVs from banks, categorize spending, and view monthly/quarterly summaries (net, in/out, median spend). Supports multi-organization and role-based access for teams. No AI/RAG features.",
+  "developed_at": "",
+  "demo": "",
+  "images": [
+    {
+      "image_id": "projects/Screenshot_2025-09-07_at_3.11.05_PM_x9y1qw",
+      "description": "Dashboard with accounts, income vs spend, and recent transactions."
+    },
+    {
+      "image_id": "projects/ww-transactions_yrs4ja",
+      "description": "Transactions table with filters, categories, and CSV import status."
+    }
+  ],
+  "techologies": [
+    "react",
+    "typescript",
+    "emotion",
+    "fastapi",
+    "sqlalchemy",
+    "redux",
+    "postgresql"
+  ]
+},
   {
     "id": 1,
     "demo": "",
     "developed_at": "",
     "github": "https://github.com/shazy89/portfolio",
-    "info": "Personal portfolio website v2. Includes more information about me and my previous and latest projects.<br /><br /> Users can find my social media links. Using the Portfolio section can find out more about my portfolio projects, read the description and see the code using the GitHub links.<br /><br /> I use the Gatsbyjs framework with Typescript and Emotion also designed the project on Figma.",
+    "info": "A modern personal portfolio built with Gatsby, TypeScript, and Emotion, fully designed in Figma. The site highlights my latest and past projects, each with descriptions and GitHub links for code access. It also includes quick links to my social platforms, making it easy to connect and explore my work.",
     "link": "https://edshaziman.com/",
     "projectName": "Portfolio Website",
     "images": [
@@ -22,7 +49,8 @@
       "gatsby-js",
       "javascript",
       "emotion",
-      "typescript"
+      "typescript",
+      "html"
     ]
   },
   {
@@ -78,31 +106,6 @@
       "html",
       "css",
       "ruby-rails",
-      "postgresql"
-    ]
-  },
-  {
-    "id": 4,
-    "projectName": "OneTouch",
-    "github": "https://github.com/shazy89/One-Touch",
-    "link": "https://edshaziman.com/",
-    "info": "Management system that restaurants use to efficiently manage guests through the entire dining experience. It gives managers the tools to turn tables faster and reduce errors.<br/><br/>To be able to use the program, users must create a new account or can log in with their GitHub acc. There must be an admin user. Admin users can manage the app. They can create, edit, and delete products. They can also add tables, edit the tables (table numbers), and delete them. Employee users, after signing up, have access to the main menu. On the top left side is the User Profile button, users can edit and update their information. The tables are in the middle of the main menu, right under the company logo. “TABLE10” “TABLE11”",
-    "developed_at": "",
-    "demo": "https://www.youtube.com/embed/JYbe-mDsMcU",
-    "images": [
-      {
-        "image_id": "projects/ot2_stmumv",
-        "description": null
-      },
-      {
-        "image_id": "projects/ot3_vjnp1a",
-        "description": null
-      }
-    ],
-    "techologies": [
-      "ruby-rails",
-      "html",
-      "css",
       "postgresql"
     ]
   }

@@ -10,6 +10,8 @@ import { Page } from 'components/layout/containers/page'
 import { Area } from 'components/layout/containers/area'
 
 const IndexPage = () => {
+
+  console.log(process.env.GATSBY_CLOUDINARY_CLOUD_NAME) 
   return (
     <ScreenSizeProvider>
       <Page>
